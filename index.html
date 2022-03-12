@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Emoji: https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f4bb -->
+    <title>&#x1f468;&#x200d;&#x1f4bb; &#128400; &#x1f4b3; &#x1f4f0;  Business Card Arjen Bos</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    
+    <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (https://fontawesome.com/v4/icons/) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Alpine -->
+    <script defer src="https://unpkg.com/alpinejs@3.1.1/dist/cdn.min.js"></script>
+    <!-- CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        .font-family-montserrat {font-family: Montserrat, sans-serif;}
+    </style>
+</head>
+
+<body class="bg-gray-500 font-family-montserrat bg-gradient-to-t from-pink-500 to-violet-500">
+    
+    <div class="overflow-hidden bg-white my-10 mx-auto rounded shadow flex flex-row" style="height: 51mm; width: 89mm;">
+        <div class="relative w-1/2">
+            <!-- De witte polygons geven de schuine randen (https://tailwindui.com/components/marketing/sections/heroes) -->
+            <svg class="z-10 absolute h-full w-full" fill="white" viewBox="0 0 100 100">
+                <polygon points="0,0 35,0 5,100 0,100"></polygon>
+            </svg>
+            <svg class="z-10 absolute h-full w-full" fill="white" viewBox="0 0 100 100">
+                <polygon points="100,0 100,0 100,100 70,100"></polygon>
+            </svg>
+            <!-- Pasfoto met gradient van donkergrijs naar transparant op 15% -->
+            <div class="h-full w-full bg-cover filter grayscale" style="background-image: linear-gradient(to top, rgba(17, 24, 39, 0.5), transparent 15%), url(img/Foto%20bij%20scrumcafe_crop2.jpg);">
+            </div>
+        </div>
+        <div>
+            <h1>&#x1f468;&#x200d;&#x1f4bb; &#x1f4b3; &#x1f4f0; Arjen Bos MSc</h1>
+            <h2>Consultant Data Analyst</h2>
+            <a href=#><i class="fa fa-envelope"></i></a>
+            <a href=#><i class="fa fa-phone"></i></a>
+            <a href=#><i class="fa fa-whatsapp"></i></a>
+            <a href=#><i class="fa fa-linkedin"></i></a>
+            <a href=#><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    
+    <div class="my-10 mx-auto rounded flex flex-row" style="height: 51mm; width: 89mm;">
+        <div>
+            <img class="filter grayscale" src="img/Cover%20photo%20uitzicht%20EIFFEL.jpg">
+        </div>
+    </div>
+    
+    <div class="filter grayscale bg-cover grayscale my-10 mx-auto rounded flex flex-row" style="height: 51mm; width: 89mm; background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
+<!--
+        <div>
+            <img src="img/Cover%20photo%20uitzicht%20EIFFEL.jpg">
+        </div>
+-->
+    </div>
+    
+</body>
+</html>
