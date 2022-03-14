@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,13 @@
     <title>&#x1f468;&#x200d;&#x1f4bb; Business Card Arjen Bos</title>
     <meta name="author" content="Arjen Bos">
     <meta name="description" content="Business Card Arjen Bos">
+    
+    <!--
+        Ontwikkeld door Arjen met behulp van:
+            * Tailwind
+            * Font Awesome
+            * Brackets
+    -->
     
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,16 +25,23 @@
     <!-- CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        .font-montserrat {font-family: Montserrat, sans-serif;}
+        
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
-        .font-family-montserrat {font-family: Montserrat, sans-serif;}
-        .font-family-roboto {font-family: Roboto, sans-serif;}
+        .font-roboto {font-family: Roboto, sans-serif;}
+        
+        
+        @import url('http://fonts.cdnfonts.com/css/fira-sans');
+        .font-fira-sans {font-family: 'Fira Sans', sans-serif;}
+        
         /* TODO: Bepaal font
         
         bg-gradient-to-r from-green-300 to-indigo-300
         %23a0aec0
         */
 
-        .business-card {
+        /* Height-width of a business card */
+        .hw-business-card {
             height: 51mm; 
             width: 89mm;
         }
@@ -60,7 +73,7 @@
 <body class="pattern2 bg-gray-600 flex justify-center">
     <div class="grid grid-flow-col grid-cols-2 grid-rows-3 gap-10 p-10">
     
-        <div class="font-family-montserrat business-card overflow-hidden bg-gray-50 rounded shadow-xl flex flex-row">
+        <div class="font-montserrat hw-business-card overflow-hidden bg-gray-50 rounded shadow-xl flex flex-row">
             <div class="relative w-1/2">
                 <!-- 
                     De polygons geven de schuine randen aan de pasfoto (https://tailwindui.com/components/marketing/sections/heroes)
@@ -92,8 +105,8 @@
             </div>
         </div>
 
-        <div class="business-card overflow-hidden bg-primary-light rounded shadow-xl flex flex-row">
-            <div class="relative saturate-50 w-1/2">
+        <div class="font-fira-sans hw-business-card overflow-hidden bg-primary-light rounded shadow-xl flex flex-row">
+            <div class="relative w-1/2">
                 <!-- 
                     De polygons geven de schuine randen aan de pasfoto (https://tailwindui.com/components/marketing/sections/heroes)
 
@@ -107,24 +120,24 @@
                 <svg class="z-10 absolute h-full w-full" fill="#f0eef1" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon points="100,0 100,0 100,100 70,100"></polygon>
                 </svg>
-                <!-- Pasfoto met gradient van donkergrijs naar transparant op 15% -->
-                <div class="h-full w-full bg-cover" style="background-image: linear-gradient(to top, rgba(17, 24, 39, 0.5), transparent 15%), url(img/Foto%20bij%20scrumcafe_crop2.jpg);">
+                <!-- Pasfoto met subtiele gradient aan de onderkant van donkergrijs naar transparant op 15% -->
+                <div class="h-full w-full bg-cover" style="background-image: linear-gradient(to top, rgba(17, 24, 39, 0.5), transparent 15%), url(img/Foto%20bij%20scrumcafe_crop2_less_sat2.jpg);">
                 </div>
             </div>
             <div class="w-1/2 p-4 text-center">
                 <h1 class="mt-10 p-1 bg-secondary text-primary-light text-lg">Arjen Bos MSc</h1>
                 <h2 class="mt-1 text-primary-dark text-xs">Consultant Data Analyst</h2>
                 <div class="mt-8 text-secondary text-sm space-x-2">
-                    <a href=#><i class="fa fa-envelope"></i></a>
-                    <a href=#><i class="fa fa-phone"></i></a>
-                    <a href=#><i class="fa fa-whatsapp"></i></a>
-                    <a href=#><i class="fa fa-linkedin"></i></a>
-                    <a href=#><i class="fa fa-github"></i></a>
+                    <a href=# title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href=# title="Telefoon"><i class="fa fa-phone"></i></a>
+                    <a href=# title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                    <a href=# title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href=# title="GitHub"><i class="fa fa-github"></i></a>
                 </div>
             </div>
 </div>
         
-        <div class="font-family-roboto business-card overflow-hidden bg-primary-dark rounded shadow-xl flex flex-row">
+        <div class="font-roboto hw-business-card overflow-hidden bg-primary-dark rounded shadow-xl flex flex-row">
             <div class="relative w-1/2">
                 <!-- 
                     De polygons geven de schuine randen aan de pasfoto (https://tailwindui.com/components/marketing/sections/heroes)
@@ -144,7 +157,7 @@
                 </div>
             </div>
             <div class="w-1/2 p-4 text-center">
-                <h1 class="mt-10 p-1 bg-secondary text-primary-light text-lg">Arjen Bos MSc</h1>
+                <h1 class="mt-10 p-1 bg-secondary text-primary-light">Arjen Bos MSc</h1>
                 <h2 class="mt-1 text-primary-light text-xs">Consultant Data Analyst</h2>
                 <div class="mt-6 text-secondary text-sm space-x-2">
                     <a href=#><i class="fa fa-envelope"></i></a>
@@ -156,13 +169,21 @@
             </div>
         </div>
 
-        <div class="font-family-montserrat business-card grayscale relative bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
+        <div class="font-montserrat hw-business-card grayscale relative bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
             <div class="absolute p-2 text-semibold text-gray-50" style="top: 25px; left: 160px;">
                 "Een mooie quote"
             </div>
         </div>
+        
+        <div class="relative font-fira-sans hw-business-card bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
+            <div class="absolute p-2 bg-secondary text-sm text-primary-light -skew-x-12" style="top: 148px; left: 135px;">
+                <div class="skew-x-12">
+                    Uitzichtje he. Nie?
+                </div>
+            </div>
+        </div>
 
-        <div class="business-card relative bg-cover rounded overflow-hidden flex justify-center items-center" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
+        <div class="font-fira-sans hw-business-card relative bg-cover rounded overflow-hidden flex justify-center items-center" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
             <div class="z-20 absolute p-2 text-semibold text-gray-50" style="top: 50px; left: 185px;">
                 Een mooie<br>quote
             </div>
@@ -171,10 +192,7 @@
             </svg>
         </div>
 
-        <div class="font-family-roboto business-card relative bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">            <div class="absolute p-2 text-semibold text-gray-50" style="top: 25px; left: 160px;">
-                Een mooie quote
-            </div>
-        </div>
+
 
         
     </div>
