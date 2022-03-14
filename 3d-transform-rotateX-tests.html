@@ -72,19 +72,9 @@
 </head>
 
 <body x-data="{ open: false }" class="pattern2 bg-gray-600 flex justify-center">
-    <div class="relative pt-10 hw-business-card">
+    <div class="p-10">
         
-        <div 
-             x-show="!open"
-             x-transition:enter="transition ease duration-300"
-             x-transition:enter-start="opacity-0 scale-90"
-             x-transition:enter-end="opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-300"
-             x-transition:leave-start="opacity-100 scale-100"
-             x-transition:leave-end="opacity-0 scale-90"
-             @click="open = !open" 
-             class="absolute font-fira-sans hw-business-card overflow-hidden bg-primary-light rounded shadow-xl flex flex-row"
-        >
+        <div x-show="!open" x-transition @click="open = !open" class="font-fira-sans hw-business-card overflow-hidden bg-primary-light rounded shadow-xl flex flex-row">
             <div class="relative w-1/2">
                 <!-- 
                     De polygons geven de schuine randen aan de pasfoto (https://tailwindui.com/components/marketing/sections/heroes)
@@ -120,17 +110,7 @@
             </div>
         </div>
 
-        <div 
-             x-show="open"
-             x-transition:enter="transition ease duration-300"
-             x-transition:enter-start="opacity-0 scale-90"
-             x-transition:enter-end="opacity-100 scale-100"
-             x-transition:leave="transition ease-in duration-300"
-             x-transition:leave-start="opacity-100 scale-100"
-             x-transition:leave-end="opacity-0 scale-90"
-             @click="open = !open" 
-             class="absolute font-fira-sans hw-business-card bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);"
-        >
+        <div x-show="open" x-transition @click="open = !open" class="relative font-fira-sans hw-business-card bg-cover rounded overflow-hidden flex flex-row" style="background-image: url(img/Cover%20photo%20uitzicht%20EIFFEL.jpg);">
             <div class="absolute p-2 bg-secondary text-sm text-primary-light -skew-x-12" style="top: 148px; left: 135px;">
                 <div class="skew-x-12">
                     Uitzichtje he. Nie?
@@ -138,6 +118,100 @@
             </div>
         </div>
         
+        
+        
+        
+        <style>
+         /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transition: all 0.8s ease;
+  transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+/*
+  -webkit-backface-visibility: hidden;  Safari 
+  backface-visibility: hidden;
+*/
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+} 
+        </style>
+        
+        <div x-data="{ flip: false }" class="mt-10">
+        
+         <div class="flip-card">
+          <div class="flip-card-inner">
+            <div 
+                 x-show="flip"
+                 x-transition:enter="transition rotateX(180deg) duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                 
+                 class="flip-card-front">
+              Hi there!
+            </div>
+            <div 
+                 x-show="!flip"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                 
+                 class="flip-card-back">
+              <h1>John Doe</h1>
+              <p>Architect & Engineer</p>
+              <p>We love that guy</p>
+            </div>
+          </div>
+        </div> 
+        
+        <button class="mt-20 p-3 bg-red-200" @click="flip = !flip">
+            <span x-text="flip"></span>
+        </button>
+            
+
+            
+            
+        </div>
     </div>
 </body>
 </html>
