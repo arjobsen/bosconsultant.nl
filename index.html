@@ -72,13 +72,28 @@
             <h1 class="mt-10 p-1 bg-secondary text-primary-light text-lg">Arjen Bos MSc</h1>
             <h2 class="mt-1 text-primary-dark text-xs">Consultant Data Analyst</h2>
             <div class="mt-8 text-secondary text-sm space-x-2">
-                <a href=# title="Email"><i class="fa fa-envelope"></i></a>
-                <a href=# title="Telefoon"><i class="fa fa-phone"></i></a>
-                <a href=# title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
-                <a href=# title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                <a href=# title="GitHub"><i class="fa fa-github"></i></a>
+                <a href=# target="_blank" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href=# target="_blank" title="Telefoon"><i class="fa fa-phone"></i></a>
+                <a href=# target="_blank" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                <a href=# target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href=# target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
             </div>
         </div>
     </div>
+    
+    <script scr="encrypt.js"></script>
+    <script>
+        // Wacht 1 seconde en decrypt personal data
+        function sleep(ms) {
+           return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        sleep(1000).then(() => {
+            document.querySelector('[title="Email"]').href = "mailto:" + decrypt("jogpAbicpt/om");
+            document.querySelector('[title="Telefoon"]').href = "tel:" + decrypt(",427264::867");
+            document.querySelector('[title="WhatsApp"]').href = "https://wa.me/" + decrypt("427264::867");
+            document.querySelector('[title="LinkedIn"]').href = "https://linkedin.com/in/arjenbos4";
+            document.querySelector('[title="GitHub"]').href = "https://github.com/arjobsen";
+        })
+    </script>
 </body>
 </html>
