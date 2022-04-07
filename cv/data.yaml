@@ -1,0 +1,157 @@
+werkervaring:
+  - organisatie: EIFFEL
+    functie: Professional Analytics
+    datum: Feb 2018 - Feb 2022
+    periode: 4 jaar
+    front_page: True
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
+    omschrijving: Op projectbasis in-house opdrachten bij klanten uitvoeren. Sommige interim opdrachten op basis van vaste uren meedraaien in een bestaand team o.l.v. de klant. Met andere projecten fixed-fee een oplossing, dienst of product aanbieden en de klant ontzorgen. Bij alle projecten heb ik als externe verantwoordelijkheid voor stakeholdermanagement, verwachtingen en doelen verduidelijken en is het mijn taak om de klant te helpen met waar ik goed in ben.
+  - organisatie: Bol.com (via EIFFEL)
+    functie: Power BI & Power Apps Developer
+    datum: Okt 2021 - Jan 2022
+    periode: 3 maanden
+    skills:
+      - Power BI
+      - Power Apps
+      - SharePoint
+    omschrijving: Samen met een collega (Product Owner) ontwikkel ik een Power BI rapportage voor de Director Legal van bol.com. Deze geeft inzicht in de Power App die ik in 2019 voor ze gebouwd heb. Na twee jaar gebruik van de app heeft bol.com aanvullende wensen voor nieuwe features. In korte sprints implementeer en publish ik die stapgewijs en in regelmatig overleg met de opdrachtgever.
+  - organisatie: BKR  (via EIFFEL)
+    functie: BI Specialist
+    datum: 1 maand
+    front_page: False
+    skills:
+      - Power Apps
+      - Power BI
+      - SharePoint
+    omschrijving: Ontwikkeling SharePoint lijsten, Power App voor interactie en Power BI rapport tbv registratiedossiers voor BKR (Bureau Krediet Registratie).
+  - organisatie: Van Wijnen  (via EIFFEL)
+    functie: Data Analyst
+    datum: 1 maand
+    front_page: False
+    skills:
+      - Python
+      - Shapefiles
+      - Open data
+    omschrijving: Geografische data analyse van open data (leefbaarometer) voor bouwbedrijf Van Wijnen.
+  - organisatie: ABN AMRO (via EIFFEL)
+    functie: Data Analyst
+    datum: Aug 2020 - Apr 2021
+    front_page: True
+    skills:
+      - Power BI
+      - Python
+      - Excel
+      - git
+      - SQL
+    # https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines
+    omschrijving: |
+      Als Data Analyst ben ik verantwoordelijk voor periodieke en ad-hoc analyses. Het optimaliseren en automatiseren van processen. En het monitoren daarvan.
+      
+      Ik heb hier een Agile werkomgeving opgezet met o.a. een Power BI Premium Workspace, repositories in git en een workflow om Python code te reviewen en te integreren in productie. Deze wendbare werkwijze geeft ons meer aandacht voor de wensen van gebruikers.
+  - organisatie: Belastingdienst (via EIFFEL)
+    functie: Business Analyst
+    datum: Aug 2019 - Jul 2020
+    front_page: True
+    skills:
+      - Teradata
+      - Excel
+      - SAS Visual Analytics
+      - Celonis
+    omschrijving: |
+      Binnen het 4-jarig programma tbv herinrichting van management informatie was mijn taak als business analyst bestaande MI en processen in kaart brengen (met process mining), het vaststellen van de gewenste toekomstige informatievoorziening en het vervolgens dichten van de gap door het bouwen van een dashboard.
+      
+      Het creëren van inzicht en overzicht was belangrijk bij dit project om stakeholdermanagement goed uit te voeren.
+  - organisatie: Rabobank (via EIFFEL)
+    functie: Trainer Power BI
+    datum: Jun 2019
+    front_page: True
+    skills:
+      - Power BI
+    omschrijving: Ik gaf (samen met een collega) trainingen Power BI aan een gevarieerde groep finance analisten. In de workshop gingen deelnemers zelf aan de slag met een geprepareerde dataset en moesten ze antwoorden op business vragen zoeken.
+  - organisatie: Bergman Clinics (via EIFFEL)
+    functie: Data Analyst Zorg (DBC)
+    datum: 2 maanden
+    skills:
+      - Power BI
+      - SQL
+      - Excel
+    omschrijving: |
+      Bij de zorgadministratie heb ik de processen in kaart gebracht adhv data uit het EPD en heb ik stuurinformatie ontworpen in een dashboard met automatische refresh.
+      
+      Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) door Bergman Clinics. Duidelijk en structureel stakeholdermanagement was erg belangrijk om belangen van beide partijen mee te nemen.
+  - organisatie: Alliander (via EIFFEL)
+    functie: Data Analyst
+    datum: 2 maanden
+    skills:
+      - Power Query
+      - VBA
+    omschrijving: Ik heb de rapportage van de keten Groot Verbruik geoptimaliseerd. Het oude proces, met Excel en VBA, kostte 30 minuten handmatig werk en was foutgevoelig. Na mijn optimalisatie, waarin ik het proces terug heb gebracht naar de essentie en ombouw naar Power Query, liept het proces na een druk op de knop automatisch en betrouwbaar af.
+  - organisatie: Aegon Bank (via EIFFEL)
+    functie: Data Analyst finance
+    datum: 6 maanden
+    skills:
+      - SQL
+      - R
+      - git
+    omschrijving: Samen met een senior data analyst had ik de taak om de maandrapportage te optimaliseren. Deze omvatte verschillende Excel-bestanden die op verschillende wijze de afdeling binnenkwamen. Werkzaamheden omvatte visual stream maps van proces optekenen, data migreren naar een MS SQL database, dataverwerking automatiseren, agile werkwijze en communicatie met de klant. Het proces teruggebracht van 4 dagen (32 uur) naar 4 uur.
+  - organisatie: Aegon Group Corporate (via EIFFEL)
+    functie: BI Specialist Privacy
+    datum: 2 maanden
+    skills:
+      - Power BI
+      - Python
+    omschrijving: |
+      Aegon Group werkt met OneTrust voor dataopslag mbt het verwerken van persoonsgegevens. Maar OneTrust mist een gebruikersvriendelijke manier om inzicht te krijgen.
+      
+      Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat de Chief Privacy Officer wereldwijd inzicht krijgt waar, welke data van klanten wordt verwerkt en wat de datakwaliteit van OneTrust biedt.
+  - organisatie: TELE2 (via EIFFEL)
+    functie: BI Specialist
+    datum: 1 maand
+    skills:
+      - Power BI
+    omschrijving: Vestigingen van TELE2 communiceren met het hoofdkantoor via ticketsysteem Freshdesk. Het hoofdkantoor heeft behoefte aan inzicht en managementinformatie. Ik heb een rapportage gebouwd op een export uit Freshdesk die de opdrachtgever van alle gewenste informatie voorziet.
+  - organisatie: Aegon NL (via EIFFEL)
+    functie: Data Analyst Privacy
+    datum: 2 maanden
+    skills:
+      - Python
+      - Power BI
+    omschrijving: Aegon NL heeft behoefte aan analyse van data van alle Nederlandse vestiging om te controleren of ze AVG-compliant zijn. Ik heb een dataset van 400+ Excelbestanden verwerkt, geanalyseerd en gevisualiseerd.
+  - organisatie: Alliander (via EIFFEL)
+    functie: Data Consultant
+    datum: 2 maanden
+    skills:
+      - SAP Business Objects
+      - Excel
+      - Power BI
+    omschrijving: Alliander neemt het takenpakket van derde partij Zuit intern over. Adhv de beschikbare data heb ik een financiële businesscase opgesteld en KPIs en een rapportage ingericht.
+  - organisatie: Erasmus MC (via EIFFEL)
+    functie: BI en Process Analyst Zorg
+    datum: 1 maand
+    skills:
+      - Excel
+      - Power BI
+    omschrijving: Zorgadministratie behandelt foutieve registraties in het EPD. Mijn taak was het optimaliseren van de dagelijkse voortgangsrapportage. Na onderzoek met stakeholders welke KPIs relevant zijn heb ik een dashboard gebouwd en het proces versnelt van 4 uur handmatig naar 30 minuten deels automatisch.
+  - organisatie: Tijdvooreenweb.site
+    functie: Freelance Website Developer
+    datum: Jan 2018 - heden
+    front_page: True
+    skills:
+      - HTML
+      - CSS
+      - Python
+    omschrijving: Naast mijn werk bij EIFFEL ontwerp, bouw en host ik statische websites voor een kleine groep klanten. Ik vind het leuk om me te verdiepen in webdesign en om direct resultaat te zien bij aanpassingen.
+  - organisatie: Philips Handheld Diagnostics
+    functie: Process Test Engineer
+    datum: Sep 2016 - Aug 2017
+    front_page: True
+    skills:
+      - MATLAB
+      - PowerShell
+      - VBA
+    omschrijving: Binnen de R&D afdeling van Philips Handheld Diagnostics was ik verantwoordelijk voor het testen en verbeteren van processen voor quality checks. Value stream mapping, opstellen van werkinstructies, selectie hardware en software, programmeren analysetool en verbeteren van bestaande VBA macro's waren dagelijkse werkzaamheden.
+    

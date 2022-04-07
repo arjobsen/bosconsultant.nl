@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('http://fonts.cdnfonts.com/css/fira-sans');
+
+.font-header {font-family: 'Fira Sans', sans-serif;}
+.font-body {font-family: 'Roboto', sans-serif;}
+
+.A4 {
+    height: 297mm;
+    width: 210mm;
+}
+
+.A4-landscape {
+    height: 210mm;
+    width: 297mm;
+}
+
+
+@media print {
+    /* Could be https://tailwindcss.com/docs/breakpoints#styling-for-print */
+    .A4, .A4-landscape {
+        margin: 0;
+        box-shadow: none;
+/*        Alles grayscale of geen bg's */
+    }
+}
+
+/* Could be https://tailwindcss.com/docs/customizing-colors */
+/*
+.bg-primary-light {background-color: #f0eef1;}
+.bg-primary-dark {background-color: #393e44;}
+.bg-secondary {background-color: #db9f60;}
+.text-primary-light {color: #f0eef1;}
+.text-primary-dark {color: #393e44;}
+.text-secondary {color: #db9f60;}
+
+*/
