@@ -32,7 +32,9 @@
 <!-- Volledige scherm met de achtergrond naast de pagina -->
 <body class="bg-gray-50">
 
-    <!-- De A4 pagina in het midden van het scherm -->
+    <!-- 
+        FRONTPAGE
+    -->
     <div class="A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded overflow-hidden print:m-0 print:shadow-none print:rounded-none">
 
         <!-- Eerste rij, grid met 3 kolommen -->
@@ -232,6 +234,41 @@
                 </div>
         </div>
     </div>
+    
     </div>
+    
+    <!-- 
+        TRACKRECORD
+        Elke 5 projecten op een aparte pagina
+    -->
+    <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
+    {% for i in range(0, data.werkervaring|length, 5) %}
+    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
+        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
+        <div class="grid grid-cols-5">
+            <!-- Elke werkervaring in een aparte kolom -->
+            {% for w in data.werkervaring[i:i+5] %}
+            <div>
+                <div class="flex my-4">
+                    <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
+                    <div class="my-auto h-px w-full bg-primary-dark"></div>
+                </div>
+                <div class="m-2">
+                    <div class="text-sm text-stone-500">{{ w.datum }}</div>
+                    <div class="text-lg text-secondary">{{ w.functie }}</div>
+                    <div class="mb-4 text-stone-500">{{ w.organisatie }}</div>
+                    <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+                        {% for s in w.skills %}
+                        <li>{{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="text-xs whitespace-pre-wrap">{{ w.omschrijving }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
 </body>
 </html>
