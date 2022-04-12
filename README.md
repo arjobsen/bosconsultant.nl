@@ -14,8 +14,7 @@ Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben
 ## Develop notes
 ### Todos
 * Wordbreaks <wbr> in template als HTML doorzetten
-* HTML naar PDF script
-* Merge frontpage en trackrecord script of command (pdftk)
+    * Check yaml.safe_load() en/of jinja2 escapes
 
 ### Setup
 1) Clone deze repo `git clone https://github.com/arjobsen/cv`
@@ -30,6 +29,6 @@ Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben
 1) Run `python render.py`
 
 ### Prints
-1) Gebruik de verborgen [Print] knop om de pagina's één voor één te printen.
-1) Print deze als PDF in de print folder
-1) Voeg de front page en track record samen `pdftk (ls print_*) cat output CV\ Arjen\ Bos\.pdf`
+1) Gebruik de verborgen [Print pages 1 by 1] knop om de pagina's één voor één te printen.
+1) Print deze als losse PDF in de print folder en noem ze print_1, print_2, etc.
+1) Voeg de geprinte PDF's samen `pdftk (ls print_*) cat output CV\ Arjen\ Bos\.pdf`
