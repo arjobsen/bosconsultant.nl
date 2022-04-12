@@ -1,20 +1,22 @@
 # Arjen Bos - Curriculum Vitea
 Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben je geïnteresseerd in de hard-skills die ik te bieden heb.
-* git
-  * Bij ABN AMRO verzorgde ik het versiebeheer van ons team. Dit hield in dat ik de remote repo opzette en onderhield, toezag op juiste werkwijze en branchingstrategie en merge-conflicts oploste.
-  * Veel van mijn persoonlijke projecten beheer ik met git. De repo's staan op GitHub, maar (helaas) de meeste zijn niet public.
 * Python
   * Bij elk project gebruik ik wel [pandas-profiling](https://pypi.org/project/pandas-profiling/), zelfs al heeft het project verder niets met Python te maken. 
-  * Voor data analyse zijn pandas, matplotlib en jupyter favoriete packages.
+  * Voor data analyse zijn pandas, matplotlib en jupyter mijn favoriete packages.
   * Automatiseren van processen doe ik o.a. met selenium, lxml, pathlib.
-  * Mijn CV is ook gebouwd met Python! De code vind je in deze repo.
+  * Mijn CV is ook gebouwd met Python! De code vind je in deze repo in de folder cv.
+* git
+  * Bij ABN AMRO verzorgde ik het versiebeheer van ons team. Dit hield in dat ik de remote repository opzette en onderhield, toezag op juiste werkwijze en branchingstrategie en merge-conflicts oploste.
+  * Veel van mijn persoonlijke projecten beheer ik met git. De repo's staan op GitHub, maar (helaas) de meeste zijn niet public.
+  * Deze repo bevat de code van mijn website en mijn CV.
 * Markdown
+  * Documentatie, zoals deze README, schrijf ik het liefst in Markdown. Dat is gemakkelijk en duidelijk.
 
-
-## Develop notes
+## Developers notes
 ### Todos
-* Wordbreaks <wbr> in template als HTML doorzetten
+* Wordbreaks `<wbr>` in template als HTML doorzetten
     * Check yaml.safe_load() en/of jinja2 escapes
+* Download PDF (en zwartwit PDF) optie onderin website CV
 
 ### Setup
 1) Clone deze repo `git clone https://github.com/arjobsen/cv`
