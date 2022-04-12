@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
-
+<!-- TODO: Beautify code als de nieuwe Brackets op Linux wordt ondersteund -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
-    <!-- TODO: Beautify code als de nieuwe Brackets op Linux wordt ondersteund -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        // TODO: Fonts hierbij
         tailwind.config = {
           theme: {
             extend: {
@@ -27,15 +27,53 @@
     
     <!-- CSS -->
     <link href="styles.css" rel="stylesheet">
+    
 </head>
-
-<!-- Volledige scherm met de achtergrond naast de pagina -->
-<body class="bg-gray-50">
+<body class="relative bg-pattern bg-gray-400">
+    
+    <script>
+        function printPages() {
+            const pages = document.querySelectorAll(".A4, .A4-landscape");
+            
+            // Verberg alle pagina's
+            pages.forEach(function(page) {
+                page.classList.add("hidden");
+            });
+                
+            // Laat één voor één toch zien en print
+            pages.forEach(function(page) { 
+//                // Verberg alle pagina's
+//                pages.forEach(function(page) {
+//                    page.classList.add("hidden");
+//                });
+                
+                page.classList.remove("hidden");
+                
+//                function sleep(ms) {
+//                   return new Promise(resolve => setTimeout(resolve, ms));
+//                }
+//                sleep(5000).then(() => {
+                    window.print();
+//                })
+                page.classList.add("hidden");
+            });
+            
+            // Laat alle pagina's weer zien
+            pages.forEach(function(page) {
+                page.classList.remove("hidden");
+            });
+        } 
+    </script>
+    <div class="absolute top-0 left-0 m-2 p-2 bg-blue-900 text-white print:hidden">
+        <button onclick="printPages()">Print</button>
+    </div>
 
     <!-- 
         FRONTPAGE
+
+A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded overflow-hidden print:m-0 print:shadow-none print:rounded-none print:visible
     -->
-    <div class="A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded overflow-hidden print:m-0 print:shadow-none print:rounded-none">
+    <div class="A4 mx-auto my-16 bg-primary-light font-body text-primary-dark rounded shadow overflow-hidden print:m-0">
 
         <!-- Eerste rij, grid met 3 kolommen -->
         <div class="grid grid-cols-3">
@@ -121,6 +159,7 @@
         <div class="col-span-2 p-7">
             <div class="h-1 w-16 bg-primary-dark my-2"></div>
             <h2 class="text-lg mb-4 uppercase tracking-wider font-header">Werkervaring</h2>
+            <!-- TODO: Haal dit uit trackrecord als frontpage=True -->
             
             <div class="mt-4 flex justify-between w-full">
                 <div>
@@ -129,12 +168,6 @@
                     <div class="text-sm">Apr 2022 - heden</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Python</li>
-                        </ul> -->
                         Power BI, Python, SQL, Excel
                     </div>
                 </div>
@@ -145,15 +178,6 @@
                     <div class="text-sm">Feb 2018 - Feb 2022</div>
                 </div>
                 <div class="text-sm">
-<!--
-                     flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>Excel</li>
-                        </ul> 
--->
                         Power BI, Python, SQL, Excel
                     </div>
                 </div>
@@ -164,14 +188,6 @@
                     <div class="text-sm">Aug 2020 - Apr 2021</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                            <li>Python</li>
-                            <li>Excel</li>
-                            <li>git</li>
-                            <li>SQL</li>
-                        </ul> -->
                         Power BI, Python, Excel, git, SQL
                     </div>
                 </div>
@@ -182,13 +198,6 @@
                     <div class="text-sm">Aug 2019 - Jul 2020</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Teradata</li>
-                            <li>Excel</li>
-                            <li>SAS VA</li>
-                            <li>Celonis</li>
-                        </ul> -->
                         Teradata, Excel, SAS VA, Celonis
                     </div>
                 </div>
@@ -199,10 +208,6 @@
                     <div class="text-sm">Jun 2019</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                        </ul> -->
                         Power BI
                     </div>
                 </div>
@@ -213,12 +218,6 @@
                     <div class="text-sm">Sep 2016 - Aug 2017</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>MATLAB</li>
-                            <li>PowerShell</li>
-                            <li>VBA</li>
-                        </ul> -->
                         MATLAB, PowerShell, VBA
                     </div>
                 </div>
@@ -240,10 +239,14 @@
     <!-- 
         TRACKRECORD
         Elke 5 projecten op een aparte pagina
+
+A4-landscape mx-auto my-40 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:rotate-90 print:p-0 print:m-0
     -->
-    <!--  -->
-    <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+    <!-- 
+        DEVELOP
+        Print offset voor landscape rotate-90: style="top:340.5mm; left:-43.5mm;"
+    -->    
+    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -341,7 +344,9 @@ Ik heb hier een Agile werkomgeving opgezet met o.a. een Power BI Premium Workspa
             </div>
         </div>
     </div>
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+    
+    
+    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -437,7 +442,8 @@ Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) do
             </div>
         </div>
     </div>
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+    
+    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -527,7 +533,8 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
             </div>
         </div>
     </div>
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+    
+    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -568,5 +575,10 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
             </div>
         </div>
     </div>
+    
+    <div class="hidden">
+        <!-- Dit is fokking raar. Als deze div hier niet staat, kan printPages() niet alle pagina's 1 voor 1 printen... -->
+    </div>
+
 </body>
 </html>

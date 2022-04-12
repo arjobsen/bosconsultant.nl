@@ -30,6 +30,6 @@ Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben
 1) Run `python render.py`
 
 ### Prints
-1) Open de HTML bestanden in een browser `firefox ./public/front_page.html`
+1) Gebruik de verborgen [Print] knop om de pagina's één voor één te printen.
 1) Print deze als PDF in de print folder
-1) Voeg de front page en track record samen `pdftk front_page.html.pdf track_record.html.pdf cat output CV\ Arjen\ Bos\.pdf`
+1) Voeg de front page en track record samen `pdftk (ls print_*) cat output CV\ Arjen\ Bos\.pdf`

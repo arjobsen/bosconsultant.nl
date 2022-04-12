@@ -15,21 +15,12 @@ with open('data.yaml') as f:
     data = yaml.safe_load(f)
     # print(data)
 
-# %%
-# Render front_page.html
-# template = env.get_template('front_page.html')
-# output = template.render(data=data)
-
-# # Save
-# with open('public/front_page.html', 'w') as f:
-#     f.write(output)
-
 
 # %%
-# Render track_record.html
-template = env.get_template('track_record.html')
+# Render
+template = env.get_template('cv.html')
 output = template.render(data=data)
 
 # Save
-with open('public/track_record.html', 'w') as f:
+with open('public/cv.html', 'w') as f:
     f.write(output)

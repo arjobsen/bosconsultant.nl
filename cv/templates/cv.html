@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +26,9 @@
     
     <!-- CSS -->
     <link href="styles.css" rel="stylesheet">
+    
 </head>
-
-<!-- Volledige scherm met de achtergrond naast de pagina -->
-<body class="bg-gray-50">
+<body class="bg-pattern bg-gray-400">
 
     <!-- 
         FRONTPAGE
@@ -121,6 +119,7 @@
         <div class="col-span-2 p-7">
             <div class="h-1 w-16 bg-primary-dark my-2"></div>
             <h2 class="text-lg mb-4 uppercase tracking-wider font-header">Werkervaring</h2>
+            <!-- TODO: Haal dit uit trackrecord als frontpage=True -->
             
             <div class="mt-4 flex justify-between w-full">
                 <div>
@@ -129,12 +128,6 @@
                     <div class="text-sm">Apr 2022 - heden</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Python</li>
-                        </ul> -->
                         Power BI, Python, SQL, Excel
                     </div>
                 </div>
@@ -145,15 +138,6 @@
                     <div class="text-sm">Feb 2018 - Feb 2022</div>
                 </div>
                 <div class="text-sm">
-<!--
-                     flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>Excel</li>
-                        </ul> 
--->
                         Power BI, Python, SQL, Excel
                     </div>
                 </div>
@@ -164,14 +148,6 @@
                     <div class="text-sm">Aug 2020 - Apr 2021</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                            <li>Python</li>
-                            <li>Excel</li>
-                            <li>git</li>
-                            <li>SQL</li>
-                        </ul> -->
                         Power BI, Python, Excel, git, SQL
                     </div>
                 </div>
@@ -182,13 +158,6 @@
                     <div class="text-sm">Aug 2019 - Jul 2020</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Teradata</li>
-                            <li>Excel</li>
-                            <li>SAS VA</li>
-                            <li>Celonis</li>
-                        </ul> -->
                         Teradata, Excel, SAS VA, Celonis
                     </div>
                 </div>
@@ -199,10 +168,6 @@
                     <div class="text-sm">Jun 2019</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>Power BI</li>
-                        </ul> -->
                         Power BI
                     </div>
                 </div>
@@ -213,12 +178,6 @@
                     <div class="text-sm">Sep 2016 - Aug 2017</div>
                 </div>
                 <div class="text-sm">
-                    <!-- flex justify-between pb-2
-                        <ul class="skills">
-                            <li>MATLAB</li>
-                            <li>PowerShell</li>
-                            <li>VBA</li>
-                        </ul> -->
                         MATLAB, PowerShell, VBA
                     </div>
                 </div>
@@ -243,7 +202,7 @@
     -->
     <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
     {% for i in range(0, data.werkervaring|length, 5) %}
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:m-0 print:rounded-none print:shadow-none">
+    <div class="A4-landscape mx-auto my-40 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:rounded-none print:shadow-none rotate-90">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
