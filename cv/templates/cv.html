@@ -1,11 +1,15 @@
 <!doctype html>
 <html>
+<!-- 
+    TODO: 
+    * Beautify code als de nieuwe Brackets op Linux wordt ondersteund
+    * Fonts in Tailwind config script
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
-    <!-- TODO: Beautify code als de nieuwe Brackets op Linux wordt ondersteund -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,11 +33,49 @@
     
 </head>
 <body class="bg-pattern bg-gray-400">
+    
+    <script>
+        function printPages() {
+            // Print alle pagina's 1 voor 1, vanwege de mix in orientatie en de marges
+            const pages = document.querySelectorAll(".A4, .A4-landscape");
+            
+            // Verberg alle pagina's
+            pages.forEach(function(page) {
+                page.classList.add("hidden");
+            });
+                
+            // Laat één voor één toch zien en print
+            pages.forEach(function(page) { 
+//                // Verberg alle pagina's
+//                pages.forEach(function(page) {
+//                    page.classList.add("hidden");
+//                });
+                
+                page.classList.remove("hidden");
+                
+//                function sleep(ms) {
+//                   return new Promise(resolve => setTimeout(resolve, ms));
+//                }
+//                sleep(5000).then(() => {
+                    window.print();
+//                })
+                page.classList.add("hidden");
+            });
+            
+            // Laat alle pagina's weer zien
+            pages.forEach(function(page) {
+                page.classList.remove("hidden");
+            });
+        } 
+    </script>
+    <div class="absolute m-2 p-2 border border-black rounded print:hidden" style="display: none;">
+        <button onclick="printPages()">Print pages 1 by 1</button>
+    </div>
 
     <!-- 
         FRONTPAGE
     -->
-    <div class="A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded overflow-hidden print:m-0 print:shadow-none print:rounded-none">
+    <div class="A4 mx-auto my-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
 
         <!-- Eerste rij, grid met 3 kolommen -->
         <div class="grid grid-cols-3">
@@ -202,7 +244,7 @@
     -->
     <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
     {% for i in range(0, data.werkervaring|length, 5) %}
-    <div class="A4-landscape mx-auto my-40 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:rounded-none print:shadow-none rotate-90">
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -229,5 +271,10 @@
         </div>
     </div>
     {% endfor %}
+
+    <div class="hidden">
+        <!-- Dit is fokking raar. Als deze div hier niet staat, kan printPages() niet alle pagina's 1 voor 1 printen... -->
+    </div>
+    
 </body>
 </html>

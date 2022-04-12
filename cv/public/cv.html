@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
-<!-- TODO: Beautify code als de nieuwe Brackets op Linux wordt ondersteund -->
+<!-- 
+    TODO: 
+    * Beautify code als de nieuwe Brackets op Linux wordt ondersteund
+    * Fonts in Tailwind config script
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +12,6 @@
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // TODO: Fonts hierbij
         tailwind.config = {
           theme: {
             extend: {
@@ -29,10 +32,11 @@
     <link href="styles.css" rel="stylesheet">
     
 </head>
-<body class="relative bg-pattern bg-gray-400">
+<body class="bg-pattern bg-gray-400">
     
     <script>
         function printPages() {
+            // Print alle pagina's 1 voor 1, vanwege de mix in orientatie en de marges
             const pages = document.querySelectorAll(".A4, .A4-landscape");
             
             // Verberg alle pagina's
@@ -64,16 +68,14 @@
             });
         } 
     </script>
-    <div class="absolute top-0 left-0 m-2 p-2 bg-blue-900 text-white print:hidden">
-        <button onclick="printPages()">Print</button>
+    <div class="absolute m-2 p-2 border border-black rounded print:hidden" style="display: none;">
+        <button onclick="printPages()">Print pages 1 by 1</button>
     </div>
 
     <!-- 
         FRONTPAGE
-
-A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded overflow-hidden print:m-0 print:shadow-none print:rounded-none print:visible
     -->
-    <div class="A4 mx-auto my-16 bg-primary-light font-body text-primary-dark rounded shadow overflow-hidden print:m-0">
+    <div class="A4 mx-auto my-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
 
         <!-- Eerste rij, grid met 3 kolommen -->
         <div class="grid grid-cols-3">
@@ -239,14 +241,9 @@ A4 mx-auto my-16 bg-primary-light font-body text-primary-dark shadow-lg rounded 
     <!-- 
         TRACKRECORD
         Elke 5 projecten op een aparte pagina
-
-A4-landscape mx-auto my-40 p-16 rounded shadow-lg bg-primary-light text-primary-dark font-body print:rotate-90 print:p-0 print:m-0
     -->
-    <!-- 
-        DEVELOP
-        Print offset voor landscape rotate-90: style="top:340.5mm; left:-43.5mm;"
-    -->    
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
+    <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -344,9 +341,7 @@ Ik heb hier een Agile werkomgeving opgezet met o.a. een Power BI Premium Workspa
             </div>
         </div>
     </div>
-    
-    
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -442,8 +437,7 @@ Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) do
             </div>
         </div>
     </div>
-    
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -533,8 +527,7 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
             </div>
         </div>
     </div>
-    
-    <div class="A4-landscape mx-auto my-16 p-16 rounded shadow overflow-hidden bg-primary-light text-primary-dark font-body print:m-0">
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
         <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
@@ -575,10 +568,10 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
             </div>
         </div>
     </div>
-    
+
     <div class="hidden">
         <!-- Dit is fokking raar. Als deze div hier niet staat, kan printPages() niet alle pagina's 1 voor 1 printen... -->
     </div>
-
+    
 </body>
 </html>
