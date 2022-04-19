@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#x1f468;&#x200d;&#x1f4bb; Arjen Bos CV</title>
     
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +35,10 @@
 </head>
 <body class="bg-pattern bg-gray-400">
     
+    <!-- PDF maken? Unhide deze knop (met F12 in de browser) en klik daarop -->
+    <div class="inline-block m-2 p-2 border border-black rounded print:hidden" style="display: none;">
+        <button onclick="printPages()">Print pages 1 by 1</button>
+    </div>
     <script>
         function printPages() {
             // Print alle pagina's 1 voor 1, vanwege de mix in orientatie en de marges
@@ -68,9 +73,6 @@
             });
         } 
     </script>
-    <div class="absolute m-2 p-2 border border-black rounded print:hidden" style="display: none;">
-        <button onclick="printPages()">Print pages 1 by 1</button>
-    </div>
 
     <!-- 
         FRONTPAGE
@@ -80,9 +82,9 @@
         <!-- Eerste rij, grid met 3 kolommen -->
         <div class="grid grid-cols-3">
 
-            <div class="p-8 bg-primary-dark">
-                <div class="w-32 h-32 m-auto rounded-full overflow-hidden">
-                    <img src="img/pasfoto.jpg" alt="Pasfoto">
+            <div class="p-6 bg-primary-dark">
+                <div class="w-36 h-36 m-auto rounded-full overflow-hidden">
+                    <img src="img/Foto_Aegon_Sat_Crop.jpg" alt="Pasfoto">
                 </div>
             </div>
 
@@ -96,12 +98,12 @@
         <!-- Tweede rij, contact info -->
         <div class="grid grid-cols-3 bg-secondary">
             <ul class="p-6 mx-auto">
-                <li><a href="mailto:arjenbos91@hotmail.nl"><i class="text-xl w-8 text-center pr-2 fa fa-envelope"></i>arjenbos91@hotmail.com</a></li>
+                <li><a href="mailto:info@ahbos.nl"><i class="text-xl w-8 text-center pr-2 fa fa-envelope"></i>info@ahbos.nl</a></li>
                 <li><a href="tel:+31615399756"><i class="text-xl w-8 text-center pr-2 fa fa-phone"></i>+31 6 15399756</a></li>
             </ul>
             <ul class="p-6 mx-auto">
                 <li><i class="text-xl w-8 text-center pr-2 fa fa-calendar"></i>3 Jan 1991</li>
-                <li><i class="text-xl w-8 text-center pr-2 fa fa-map-marker"></i>Tilburg</li>
+                <li><i class="text-xl w-8 text-center pr-2 fa fa-map-marker"></i>Eindhoven</li>
             </ul>
             <ul class="p-6 mx-auto">
                 <li><a href="https://www.linkedin.com/in/arjenbos4/" target="_blank"><i class="text-xl w-8 text-center pr-2 fa fa-linkedin"></i>/arjenbos4</a></li>
@@ -171,8 +173,8 @@
                 </div>
                 <div class="text-sm">
                         Power BI, Python, SQL, Excel
-                    </div>
                 </div>
+            </div>
             <div class="mt-4 flex justify-between w-full">
                 <div>
                     <div class="">Professional Analytics</div>
@@ -181,8 +183,8 @@
                 </div>
                 <div class="text-sm">
                         Power BI, Python, SQL, Excel
-                    </div>
                 </div>
+            </div>
             <div class="mt-4 flex justify-between w-full">
                 <div>
                     <div class="">Data Analyst</div>
@@ -191,8 +193,8 @@
                 </div>
                 <div class="text-sm">
                         Power BI, Python, Excel, git, SQL
-                    </div>
                 </div>
+            </div>
             <div class="mt-4 flex justify-between w-full">
                 <div>
                     <div class="">Business Analyst</div>
@@ -200,29 +202,29 @@
                     <div class="text-sm">Aug 2019 - Jul 2020</div>
                 </div>
                 <div class="text-sm">
-                        Teradata, Excel, SAS VA, Celonis
-                    </div>
+                        Teradata, Excel, SAS Visual Analytics, Celonis
                 </div>
+            </div>
             <div class="mt-4 flex justify-between w-full">
                 <div>
-                    <div class="">Trainer Power BI</div>
-                    <div class="text-sm">Rabobank (via EIFFEL)</div>
-                    <div class="text-sm">Jun 2019</div>
+                    <div class="">Data Analyst finance</div>
+                    <div class="text-sm">Aegon Bank (via EIFFEL)</div>
+                    <div class="text-sm">6 maanden</div>
                 </div>
                 <div class="text-sm">
-                        Power BI
-                    </div>
+                        SQL, R, git
                 </div>
+            </div>
             <div class="mt-4 flex justify-between w-full">
                 <div>
-                    <div class="">Process Development Engineer</div>
+                    <div class="">Process Test Engineer</div>
                     <div class="text-sm">Philips Handheld Diagnostics</div>
                     <div class="text-sm">Sep 2016 - Aug 2017</div>
                 </div>
                 <div class="text-sm">
                         MATLAB, PowerShell, VBA
-                    </div>
                 </div>
+            </div>
             
             <div>
                 <div class="h-1 w-16 bg-primary-dark mt-6 mb-2"></div>
@@ -248,6 +250,24 @@
         <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
         <div class="grid grid-cols-5">
             <!-- Elke werkervaring in een aparte kolom -->
+            <div>
+                <div class="flex my-4">
+                    <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
+                    <div class="my-auto h-px w-full bg-primary-dark"></div>
+                </div>
+                <div class="m-2">
+                    <div class="text-sm text-stone-500">Apr 2022 - heden</div>
+                    <div class="text-lg text-secondary">Data Analyst / BI Specialist</div>
+                    <div class="mb-4 text-stone-500">Freelance Consultant</div>
+                    <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+                        <li>Power BI</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Excel</li>
+                    </ul>
+                    <div class="text-xs whitespace-pre-wrap"></div>
+                </div>
+            </div>
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -317,6 +337,13 @@
                     <div class="text-xs whitespace-pre-wrap">Geografische data analyse van open data (leefbaarometer) voor bouwbedrijf Van Wijnen.</div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
+        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
+        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
+        <div class="grid grid-cols-5">
+            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -339,13 +366,6 @@ Ik heb hier een Agile werkomgeving opgezet met o.a. een Power BI Premium Workspa
 </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
-        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
-        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
-        <div class="grid grid-cols-5">
-            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -418,6 +438,13 @@ Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) do
                     <div class="text-xs whitespace-pre-wrap">Ik heb de rapportage van de keten Groot Verbruik geoptimaliseerd. Het oude proces, met Excel en VBA, kostte 30 minuten handmatig werk en was foutgevoelig. Na mijn optimalisatie, waarin ik het proces terug heb gebracht naar de essentie en ombouw naar Power Query, liept het proces na een druk op de knop automatisch en betrouwbaar af.</div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
+        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
+        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
+        <div class="grid grid-cols-5">
+            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -435,13 +462,6 @@ Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) do
                     <div class="text-xs whitespace-pre-wrap">Samen met een senior data analyst had ik de taak om de maandrapportage te optimaliseren. Deze omvatte verschillende Excel-bestanden die op verschillende wijze de afdeling binnenkwamen. Werkzaamheden omvatte visual stream maps van proces optekenen, data migreren naar een MS SQL database, dataverwerking automatiseren, agile werkwijze en communicatie met de klant. Het proces teruggebracht van 4 dagen (32 uur) naar 4 uur.</div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
-        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
-        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
-        <div class="grid grid-cols-5">
-            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -509,6 +529,13 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
                     <div class="text-xs whitespace-pre-wrap">Alliander neemt het takenpakket van derde partij Zuit intern over. Adhv de beschikbare data heb ik een financiële businesscase opgesteld en KPIs en een rapportage ingericht.</div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
+        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
+        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
+        <div class="grid grid-cols-5">
+            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>
@@ -525,13 +552,6 @@ Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat d
                     <div class="text-xs whitespace-pre-wrap">Zorgadministratie behandelt foutieve registraties in het EPD. Mijn taak was het optimaliseren van de dagelijkse voortgangsrapportage. Na onderzoek met stakeholders welke KPIs relevant zijn heb ik een dashboard gebouwd en het proces versnelt van 4 uur handmatig naar 30 minuten deels automatisch.</div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden font-body text-primary-dark print:m-0 print:rounded-none">
-        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
-        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
-        <div class="grid grid-cols-5">
-            <!-- Elke werkervaring in een aparte kolom -->
             <div>
                 <div class="flex my-4">
                     <div class="my-auto h-2 w-2 rounded-full bg-primary-dark"></div>

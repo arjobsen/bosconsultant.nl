@@ -18,9 +18,9 @@ with open('data.yaml') as f:
 
 # %%
 # Render
-template = env.get_template('cv.html')
+template = env.get_template('index.html')
 output = template.render(data=data)
 
 # Save
-with open('public/cv.html', 'w') as f:
+with open('public/index.html', 'w') as f:
     f.write(output)

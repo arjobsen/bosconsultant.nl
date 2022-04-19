@@ -17,6 +17,8 @@ Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben
 * Wordbreaks `<wbr>` in template als HTML doorzetten
     * Check yaml.safe_load() en/of jinja2 escapes
 * Download PDF (en zwartwit PDF) optie onderin website CV
+* Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
+* Consistentie in datums / perioden van projecten
 
 ### Setup
 1) Clone deze repo `git clone https://github.com/arjobsen/cv`

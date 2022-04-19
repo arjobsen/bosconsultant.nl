@@ -35,6 +35,10 @@
 </head>
 <body class="bg-pattern bg-gray-400">
     
+    <!-- PDF maken? Unhide deze knop (met F12 in de browser) en klik daarop -->
+    <div class="inline-block m-2 p-2 border border-black rounded print:hidden" style="display: none;">
+        <button onclick="printPages()">Print pages 1 by 1</button>
+    </div>
     <script>
         function printPages() {
             // Print alle pagina's 1 voor 1, vanwege de mix in orientatie en de marges
@@ -69,9 +73,6 @@
             });
         } 
     </script>
-    <div class="absolute m-2 p-2 border border-black rounded print:hidden" style="display: none;">
-        <button onclick="printPages()">Print pages 1 by 1</button>
-    </div>
 
     <!-- 
         FRONTPAGE
@@ -164,66 +165,18 @@
             <h2 class="text-lg mb-4 uppercase tracking-wider font-header">Werkervaring</h2>
             <!-- TODO: Haal dit uit trackrecord als frontpage=True -->
             
+            {% for w in data.werkervaring if w.frontpage %}
             <div class="mt-4 flex justify-between w-full">
                 <div>
-                    <div class="">Data Analyst / BI Specialist</div>
-                    <div class="text-sm">Freelance Consultant</div>
-                    <div class="text-sm">Apr 2022 - heden</div>
+                    <div class="">{{ w.functie }}</div>
+                    <div class="text-sm">{{ w.organisatie }}</div>
+                    <div class="text-sm">{{ w.datum }}</div>
                 </div>
                 <div class="text-sm">
-                        Power BI, Python, SQL, Excel
-                    </div>
+                        {{ w.skills|join(', ') }}
                 </div>
-            <div class="mt-4 flex justify-between w-full">
-                <div>
-                    <div class="">Professional Analytics</div>
-                    <div class="text-sm">EIFFEL</div>
-                    <div class="text-sm">Feb 2018 - Feb 2022</div>
-                </div>
-                <div class="text-sm">
-                        Power BI, Python, SQL, Excel
-                    </div>
-                </div>
-            <div class="mt-4 flex justify-between w-full">
-                <div>
-                    <div class="">Data Analyst</div>
-                    <div class="text-sm">ABN AMRO (via EIFFEL)</div>
-                    <div class="text-sm">Aug 2020 - Apr 2021</div>
-                </div>
-                <div class="text-sm">
-                        Power BI, Python, Excel, git, SQL
-                    </div>
-                </div>
-            <div class="mt-4 flex justify-between w-full">
-                <div>
-                    <div class="">Business Analyst</div>
-                    <div class="text-sm">Belastingdienst (via EIFFEL)</div>
-                    <div class="text-sm">Aug 2019 - Jul 2020</div>
-                </div>
-                <div class="text-sm">
-                        Teradata, Excel, SAS VA, Celonis
-                    </div>
-                </div>
-            <div class="mt-4 flex justify-between w-full">
-                <div>
-                    <div class="">Trainer Power BI</div>
-                    <div class="text-sm">Rabobank (via EIFFEL)</div>
-                    <div class="text-sm">Jun 2019</div>
-                </div>
-                <div class="text-sm">
-                        Power BI
-                    </div>
-                </div>
-            <div class="mt-4 flex justify-between w-full">
-                <div>
-                    <div class="">Process Development Engineer</div>
-                    <div class="text-sm">Philips Handheld Diagnostics</div>
-                    <div class="text-sm">Sep 2016 - Aug 2017</div>
-                </div>
-                <div class="text-sm">
-                        MATLAB, PowerShell, VBA
-                    </div>
-                </div>
+            </div>
+            {% endfor %}
             
             <div>
                 <div class="h-1 w-16 bg-primary-dark mt-6 mb-2"></div>

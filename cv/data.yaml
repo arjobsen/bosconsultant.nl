@@ -1,9 +1,18 @@
 werkervaring:
+  - organisatie: Freelance Consultant
+    functie: Data Analyst / BI Specialist
+    datum: Apr 2022 - heden
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
   - organisatie: EIFFEL
     functie: Professional Analytics
     datum: Feb 2018 - Feb 2022
     periode: 4 jaar
-    front_page: True
+    frontpage: True
     skills:
       - Power BI
       - Python
@@ -22,7 +31,7 @@ werkervaring:
   - organisatie: BKR  (via EIFFEL)
     functie: BI Specialist
     datum: 1 maand
-    front_page: False
+    frontpage: False
     skills:
       - Power Apps
       - Power BI
@@ -31,7 +40,7 @@ werkervaring:
   - organisatie: Van Wijnen  (via EIFFEL)
     functie: Data Analyst
     datum: 1 maand
-    front_page: False
+    frontpage: False
     skills:
       - Python
       - Shapefiles
@@ -40,7 +49,7 @@ werkervaring:
   - organisatie: ABN AMRO (via EIFFEL)
     functie: Data Analyst
     datum: Aug 2020 - Apr 2021
-    front_page: True
+    frontpage: True
     skills:
       - Power BI
       - Python
@@ -55,7 +64,7 @@ werkervaring:
   - organisatie: Belastingdienst (via EIFFEL)
     functie: Business Analyst
     datum: Aug 2019 - Jul 2020
-    front_page: True
+    frontpage: True
     skills:
       - Teradata
       - Excel
@@ -68,7 +77,7 @@ werkervaring:
   - organisatie: Rabobank (via EIFFEL)
     functie: Trainer Power BI
     datum: Jun 2019
-    front_page: True
+    frontpage: False
     skills:
       - Power BI
     omschrijving: Ik gaf (samen met een collega) trainingen Power BI aan een gevarieerde groep finance analisten. In de workshop gingen deelnemers zelf aan de slag met een geprepareerde dataset en moesten ze antwoorden op business vragen zoeken.
@@ -93,6 +102,7 @@ werkervaring:
   - organisatie: Aegon Bank (via EIFFEL)
     functie: Data Analyst finance
     datum: 6 maanden
+    frontpage: True
     skills:
       - SQL
       - R
@@ -139,7 +149,7 @@ werkervaring:
   - organisatie: Tijdvooreenweb.site
     functie: Freelance Website Developer
     datum: Jan 2018 - heden
-    front_page: True
+    frontpage: False
     skills:
       - HTML
       - CSS
@@ -148,7 +158,7 @@ werkervaring:
   - organisatie: Philips Handheld Diagnostics
     functie: Process Test Engineer
     datum: Sep 2016 - Aug 2017
-    front_page: True
+    frontpage: True
     skills:
       - MATLAB
       - PowerShell
