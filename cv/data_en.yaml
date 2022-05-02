@@ -1,0 +1,152 @@
+werkervaring:
+  - organisatie: Freelance Consultant
+    functie: Data Analyst / BI Specialist
+    datum: Apr 2022 - current
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
+  - organisatie: EIFFEL
+    functie: Professional Analytics
+    datum: Feb 2018 - Feb 2022
+    periode: 4 jaar
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
+    omschrijving: Project-based consultancy and development work for several different clients. Some of which fixed-fee solution developed by a small team of Eiffelaars. Other projects were interim based support as a team member in BI or Analytics departments. Main skills included stakeholder management, expectation management, working and reporting towards goals which help the client in the best possible way.
+  - organisatie: Bol.com (via EIFFEL)
+    functie: Power BI & Power Apps Developer
+    datum: Okt 2021 - Jan 2022
+    periode: 3 months
+    skills:
+      - Power BI
+      - Power Apps
+      - SharePoint
+    omschrijving: Design and development of a Microsoft Power App and Power BI report. The Power App was developed and released weekly in sprints. The Power BI was used to gather insight in the use of the app.
+  - organisatie: BKR  (via EIFFEL)
+    functie: BI Specialist
+    datum: 1 month
+    frontpage: False
+    skills:
+      - Power Apps
+      - Power BI
+      - SharePoint
+  - organisatie: Van Wijnen  (via EIFFEL)
+    functie: Data Analyst
+    datum: 1 month
+    frontpage: False
+    skills:
+      - Python
+      - Shapefiles
+      - Open data
+  - organisatie: ABN AMRO (via EIFFEL)
+    functie: Data Analyst
+    datum: Aug 2020 - Apr 2021
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - Excel
+      - git
+      - SQL
+    # https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines
+    omschrijving: |
+      As Data Analyst I was responsible for regular analyses and ad-hoc analyses. Optimizing and automating the report processes was part of that.
+      
+      I've set up an agile work environment with git repositories, a Power BI Premium Workspace and a sustainable workflow to review and implement Python code and to be able to quickly adjust to changing client demands.
+  - organisatie: Belastingdienst (via EIFFEL)
+    functie: Business Analyst
+    datum: Aug 2019 - Jul 2020
+    frontpage: True
+    skills:
+      - Teradata
+      - Excel
+      - SAS Visual Analytics
+      - Celonis
+    omschrijving: |
+      Analysing the current state of management information and processes (with process mining). Interviewing stakeholders from various departments. Designing and building a BI report to suit new demands.
+      
+      In this project I've worked and learned together with consultants from different firms.
+  - organisatie: Rabobank (via EIFFEL)
+    functie: Trainer Power BI
+    datum: Jun 2019
+    frontpage: False
+    skills:
+      - Power BI
+  - organisatie: Bergman Clinics (via EIFFEL)
+    functie: Data Analyst Zorg (DBC)
+    datum: 2 months
+    skills:
+      - Power BI
+      - SQL
+      - Excel
+    omschrijving: I created a new automated reporting process which extracts data from the patient file system and supplies the insights necessary for the team leads.
+  - organisatie: Alliander (via EIFFEL)
+    functie: Data Analyst
+    datum: 2 months
+    skills:
+      - Power Query
+      - VBA
+    omschrijving: I optimized a daily reporting process which included a lot of manual work. The overall time needed reduced from 30 minutes to 3 minutes, freeing the team lead from his daily and annoying responsibility.
+  - organisatie: Aegon Bank (via EIFFEL)
+    functie: Data Analyst finance
+    datum: 6 months
+    frontpage: True
+    skills:
+      - SQL
+      - R
+      - git
+    omschrijving: I worked together with a senior data analyst to optimize the bank's main monthly report. We've mapped the process, migrated data from Excel files to a SQL database. Overall the process was reduced from 32 hours, with lots of manual and risky work to 4 hours.
+  - organisatie: Aegon Group Corporate (via EIFFEL)
+    functie: BI Specialist Privacy
+    datum: 2 months
+    skills:
+      - Power BI
+      - Python
+  - organisatie: TELE2 (via EIFFEL)
+    functie: BI Specialist
+    datum: 1 month
+    skills:
+      - Power BI
+  - organisatie: Aegon NL (via EIFFEL)
+    functie: Data Analyst Privacy
+    datum: 2 months
+    skills:
+      - Python
+      - Power BI
+  - organisatie: Alliander (via EIFFEL)
+    functie: Data Consultant
+    datum: 2 months
+    skills:
+      - SAP Business Objects
+      - Excel
+      - Power BI
+  - organisatie: Erasmus MC (via EIFFEL)
+    functie: BI en Process Analyst Zorg
+    datum: 1 month
+    skills:
+      - Excel
+      - Power BI
+  - organisatie: Tijdvooreenweb.site
+    functie: Freelance Website Developer
+    datum: Jan 2018 - current
+    frontpage: False
+    skills:
+      - HTML
+      - CSS
+      - Python
+    omschrijving: Besides my work at EIFFEL I enjoy building and maintaining websites for a small group of clients.
+  - organisatie: Philips Handheld Diagnostics
+    functie: Process Test Engineer
+    datum: Sep 2016 - Aug 2017
+    frontpage: True
+    skills:
+      - MATLAB
+      - PowerShell
+      - VBA
+    omschrijving: I was responsible for testing and improving quality checks.
