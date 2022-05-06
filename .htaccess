@@ -1,0 +1,8 @@
+# Gebruik altijd www, zie https://www.yes-www.org/redirection
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Link CV direct naar de pdf
+RewriteRule ^cv/?$ /CV_Arjen_Bos.pdf [NC,R=301,L]
+
