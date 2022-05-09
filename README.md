@@ -1,38 +1,9 @@
-# Arjen Bos - Curriculum Vitea
-Als je dit leest heb je waarschijnlijk het GitHub-logo op mijn CV herkent en ben je geïnteresseerd in de hard-skills die ik te bieden heb.
-* Python
-  * Bij elk project gebruik ik wel [pandas-profiling](https://pypi.org/project/pandas-profiling/), zelfs al heeft het project verder niets met Python te maken. 
-  * Voor data analyse zijn pandas, matplotlib en jupyter mijn favoriete packages.
-  * Automatiseren van processen doe ik o.a. met selenium, lxml, pathlib.
-  * Mijn CV is ook gebouwd met Python! De code vind je in deze repo in de folder cv.
-* git
-  * Bij ABN AMRO verzorgde ik het versiebeheer van ons team. Dit hield in dat ik de remote repository opzette en onderhield, toezag op juiste werkwijze en branchingstrategie en merge-conflicts oploste.
-  * Veel van mijn persoonlijke projecten beheer ik met git. De repo's staan op GitHub, maar (helaas) de meeste zijn niet public.
-  * Deze repo bevat de code van mijn website en mijn CV.
-* Markdown
-  * Documentatie, zoals deze README, schrijf ik het liefst in Markdown. Dat is gemakkelijk en duidelijk.
+### 🙋 Hi, ik ben Arjen  
+👀 Ik ben geïnteresseerd in data analyse, verbeteren van bedrijfsprocessen en automatiseren van saaie taken zodat iedereen zijn talent op een leuke manier kan inzetten  
+🌱 Ik ben me op het moment aan het verdiepen in het vergroten van de effectiviteit van mijzelf en (de mensen in) mijn omgeving  
+💞️ Ik ben altijd bereikbaar om te praten over gave projecten bij interessante organisaties  
+📫 Je kunt mij bereiken via de opties op mijn [digitale visitekaartje](https://ahbos.nl)  
+📝 Mijn CV kun je altijd up-to-date vinden op [ahbos.nl/cv](https://ahbos.nl/cv)  
 
-## Developers notes
-### Todos
-* Wordbreaks `<wbr>` in template als HTML doorzetten
-    * Check yaml.safe_load() en/of jinja2 escapes
-* Download PDF (en zwartwit PDF) optie onderin website CV
-* Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
-* Consistentie in datums / perioden van projecten
-
-### Setup
-1) Clone deze repo `git clone https://github.com/arjobsen/cv`
-1) Opzetten virtual environment `python -m venv venv`
-1) Activeer deze, zie [docs](https://docs.python.org/3/library/venv.html)
-    * Op Linux met fish gebruik `source venv/bin/activate.fish`
-1) Check eventueel met `which python`
-1) Installeer requirements `pip install -r requirements.txt`
-
-### Render templates naar HTML
-1) Activeer de virtual environment
-1) Run `python render.py`
-
-### Prints
-1) Gebruik de verborgen [Print pages 1 by 1] knop om de pagina's één voor één te printen.
-1) Print deze als losse PDF in de print folder en noem ze print_1, print_2, etc.
-1) Voeg de geprinte PDF's samen `pdftk (ls print_*) cat output CV\ Arjen\ Bos\.pdf`
+🙌 Je hebt waarschijnlijk het GitHub logo op mijn CV herkent. Wat cool! Deze repository bevat de code van mijn website en mijn CV. Je zal hier vooral HTML en Python vinden. Vragen vind ik leuk om te beantwoorden dus stel ze gerust!  
+💻 Alle code hier is openbaar. Ik gebruik HTML, CSS  en Python om mijn CV te maken. Zie de cv folder voor details en de code.
