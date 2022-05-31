@@ -22,7 +22,7 @@
 
 #pasfoto {
 /*    background:  url("img/Foto_Aegon.jpg") no-repeat top;*/
-    background-image: linear-gradient(to top, rgba(17, 24, 39, 0.3), transparent 25%), url(img/Foto_Aegon.png);
+    background-image: linear-gradient(to top, rgba(17, 24, 39, 0.3), transparent 25%), url(img/Foto_Aegon.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
