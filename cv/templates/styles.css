@@ -22,11 +22,13 @@
 
 #pasfoto {
 /*    background:  url("img/Foto_Aegon.jpg") no-repeat top;*/
-    background-image: linear-gradient(to top, rgba(17, 24, 39, 0.3), transparent 25%), url(img/Foto_Aegon.jpg);
+    background-image: linear-gradient(to top, rgba(17, 24, 39, 0.3), transparent 25%);
+/*
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;  
-    filter: saturate(0.8)
+*/
+    filter: saturate(0.85)
 }
 
 /* Background svg pattern https://merakiui.com */
