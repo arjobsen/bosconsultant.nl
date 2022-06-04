@@ -100,9 +100,9 @@ werkervaring:
       - VBA
     omschrijving: Ik heb de rapportage van de keten Groot Verbruik geoptimaliseerd. Het oude proces, met Excel en VBA, kostte 30 minuten handmatig werk en was foutgevoelig. Na mijn optimalisatie, waarin ik het proces terug heb gebracht naar de essentie en ombouw naar Power Query, liept het proces na een druk op de knop automatisch en betrouwbaar af.
   - organisatie: Aegon Bank (via EIFFEL)
-    functie: Data Analyst finance
+    functie: Data Analyst Finance
     datum: Aug 2018 - Feb 2019
-    frontpage: True
+    frontpage: False
     skills:
       - SQL
       - R
