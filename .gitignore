@@ -1,2 +1,3 @@
 recyclebin/
 venv/
+__pycache__/

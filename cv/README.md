@@ -18,6 +18,8 @@ Ik gebruik Python en [Jinja](https://jinja.palletsprojects.com/) om data, een ya
 1) Navigeer naar de cv folder `cd cv`
 1) Run `python render.py`
 
+<!--
+Dit is niet meer nodig. Het zijn allemaal landscape pagina's die gewoon met Ctrl+P te printen zijn!
 ### Print de pagina's als PDF
 1) Unhide de verborgen (Print pages 1 by 1) knop
   * Ga naar developer tools (F12 op Firefox)
@@ -29,13 +31,4 @@ Ik gebruik Python en [Jinja](https://jinja.palletsprojects.com/) om data, een ya
 1) Navigeer naar de prints folder `cd prints`
 1) Voeg de geprinte PDF's samen `pdftk $(ls pages/*) cat output CV_Arjen_Bos.pdf`
   * Let op, [command substitution met fish](https://fishshell.com/docs/current/fish_for_bash_users.html#command-substitutions) gebruikt alleen de (haakjes), dus zonder $
-
-### Todos
-- [ ] Wordbreaks `<wbr>` in template als HTML doorzetten
-  - [ ] Check yaml.safe_load() en/of jinja2 escapes
-- [ ] Download PDF (en zwartwit PDF) optie onderin website CV
-- [ ] Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
-- [ ] Consistentie in datums / perioden van projecten
-- [ ] Automatiseer het handmatige printproces
-  - [x] Ik heb al Python package html->pdf geprobeerd maar die pakt Tailwind niet goed mee
-  - [x] Het Firefox print venster lijkt niet goed automatiseerbaar, ook niet met Selenium
+-->

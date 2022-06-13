@@ -1,9 +1,12 @@
 <!doctype html>
 <html>
 <!-- 
-    TODO: 
-    * Beautify code als de nieuwe Brackets op Linux wordt ondersteund
-    * Fonts in Tailwind config script
+TODOS:
+    * Wordbreaks `<wbr>` in template als HTML doorzetten
+        * Check yaml.safe_load() en/of jinja2 escapes
+    * Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
+    * Consistentie in datums / perioden van projecten
+
 -->
 <head>
     <meta charset="UTF-8">
@@ -12,232 +15,177 @@
     
     <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'primary-light': '#f0eef1',
-                'primary-dark': '#393e44',
-                'secondary': '#db9f60',
-              }
-            }
-          }
-        }
-    </script>
     
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
+
     <!-- CSS -->
-    <link href="styles.css" rel="stylesheet">
-    
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/montserrat');
+        @import url('https://fonts.cdnfonts.com/css/roboto');
+/*        @import url('https://fonts.cdnfonts.com/css/lato');*/
+        
+        .font-header {font-family: 'Montserrat', sans-serif;}
+        .font-body {font-family: 'Roboto', sans-serif;}
+/*        .font-body {font-family: 'Lato', sans-serif;}*/
+ 
+        .A4-landscape {
+            height: 210mm;
+            width: 297mm;
+        }
+    </style>
+
 </head>
-<body class="bg-pattern bg-gray-400">
+<body class="bg-stone-200 text-stone-700 font-body">
     
-    <!-- PDF maken? Unhide deze knop (met F12 in de browser) en klik daarop -->
-    <div class="inline-block m-2 p-2 border border-black rounded print:hidden" style="display: none;">
-        <button onclick="printPages()">Print pages 1 by 1</button>
-    </div>
-    <script>
-        function printPages() {
-            // Print alle pagina's 1 voor 1, vanwege de mix in orientatie en de marges
-            const pages = document.querySelectorAll(".A4, .A4-landscape");
-            
-            // Verberg alle pagina's
-            pages.forEach(function(page) {
-                page.classList.add("hidden");
-            });
+    <!-- FRONTPAGE -->
+    <div class="A4-landscape mx-auto my-16 p-8 bg-stone-50 print:m-0">
+        <div class="flex h-full">
+            <div class="flex-none relative w-48">
+                <img src="img/Pasfoto_Eiffel.png" alt="Pasfoto Arjen Bos" class="absolute bottom-0">
+            </div>
+            <div class="flex-1 relative">
+                <h1 class="ml-3 mt-8 mb-4 pl-3 pb-4 border-b-2 border-cyan-900 font-header text-4xl text-cyan-900">
+                    Arjen Bos MSc
+                </h1>
                 
-            // Laat één voor één toch zien en print
-            pages.forEach(function(page) { 
-//                // Verberg alle pagina's
-//                pages.forEach(function(page) {
-//                    page.classList.add("hidden");
-//                });
+                <div class="ml-6 grid grid-cols-5 gap-1">
+                    <div class="col-span-3 border-red-100 border-0">
+                        <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+                            Meest relevante werkervaring
+                        </h2>
+                        <div class="mb-4">
+                            <div>Data Analyst / BI Specialist</div>
+                            <div class="text-sm text-stone-500">A.H. Bos Consultant (Freelance) &mdash; huidig</div>
+                        </div>
+                        <div class="mb-4">
+                            <div>Consultant Analytics</div>
+                            <div class="text-sm text-stone-500">EIFFEL &mdash; 4 jaar</div>
+                        </div>
+                        <div class="mb-4">
+                            <div>Data Analyst</div>
+                            <div class="text-sm text-stone-500">ABN AMRO (via EIFFEL) &mdash; 8 maanden</div>
+                        </div>
+                        <div class="mb-4">
+                            <div>Business Analyst</div>
+                            <div class="text-sm text-stone-500">Belastingdienst (via EIFFEL) &mdash; 1 jaar</div>
+                        </div>
+                        <div class="mb-4">
+                            <div>BI Specialist</div>
+                            <div class="text-sm text-stone-500">Alliander (via EIFFEL) &mdash; 4 maanden</div>
+                        </div>
+                        <div class="mb-4">
+                            <div>Data Analyst</div>
+                            <div class="text-sm text-stone-500">Aegon Bank (via EIFFEL) &mdash; 7 maanden</div>
+                        </div>
+                        
+                        <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+                            Relevante opleidingen
+                        </h2>
+                        <div class="grid grid-cols-2 text-sm">
+                            <div>
+                                <div class="mb-2">
+                                    <div>BI &amp; Big Data Consultant</div>
+                                    <div class="text-xs text-stone-500">YoungCapital Professionals &mdash; 2017</div>
+                                </div>
+                                <div class="mb-2">
+                                    <div>Master Biomedical Engineering</div>
+                                    <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2016</div>
+                                </div>
+                                <div class="mb-2">
+                                    <div>BSc Technische Natuurkunde</div>
+                                    <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2013</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-2">
+                                    <div>Microsoft Data Analyst (DA-100)</div>
+                                    <div class="text-xs text-stone-500">Microsoft &mdash; 2020</div>
+                                </div>
+                                <div class="mb-2">
+                                    <div>Professional Scrum Master I</div>
+                                    <div class="text-xs text-stone-500">Scrum.org &mdash; 2020</div>
+                                </div>
+                                <div class="mb-2">
+                                    <div>Microsoft T-SQL (DAT201x)</div>
+                                    <div class="text-xs text-stone-500">Microsoft &mdash; 2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 mt-12 border-green-100 border-0">
+                        <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+                            Competenties
+                        </h2>
+                        <div class="grid grid-cols-2 text-sm">
+                            <ul class="list-disc list-inside">
+                                <li>Ambitieus</li>
+                                <li>Zelfstandig</li>
+                                <li>Proactief</li>
+                            </ul>
+                            <ul class="list-disc list-inside">
+                                <li>Analytisch</li>
+                                <li>Resultaatgericht</li>
+                                <li>Samenwerkend</li>
+                            </ul>
+                        </div>
+                        
+                        <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+                            Software
+                        </h2>
+                        <div class="grid grid-cols-2 text-sm">
+                            <div>
+                                <div>Microsoft Power BI</div>
+                                <div>Microsoft Excel</div>
+                                <div>Python</div>
+                                <div>SQL</div>
+                                <div>MATLAB</div>
+                                <div>VBA</div>
+                            </div>
+                            <div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+                                <div><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
+                            </div>
+                        </div>
+                        
+                        <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+                            Aanbevelingen
+                        </h2>
+                        <div class="text-sm mb-2">
+                            <div>"Arjen is snel met interpreteren en begrijpen van de data en deze vertalen naar inzichten die voor de business relevant zijn."</div>
+                            <div class="text-right text-xs text-stone-500">Wim Leeuwenkamp &mdash; Programmamanager Belastingdienst</div>
+                        </div>
+                        <div class="text-sm">
+                            <div>"Arjen heeft als unieke kwaliteit dat hij zijn gedachten omzet in daden. Hij is creatief, denkt na waarom hij iets doet en zorgt vervolgens ook dat het uitgevoerd wordt."</div>
+                            <div class="text-right text-xs text-stone-500">Mark Tijms &mdash; Teamlead Process Mining EIFFEL</div>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
                 
-                page.classList.remove("hidden");
-                
-//                function sleep(ms) {
-//                   return new Promise(resolve => setTimeout(resolve, ms));
-//                }
-//                sleep(5000).then(() => {
-                    window.print();
-//                })
-                page.classList.add("hidden");
-            });
-            
-            // Laat alle pagina's weer zien
-            pages.forEach(function(page) {
-                page.classList.remove("hidden");
-            });
-        } 
-    </script>
-
-    <!-- 
-        FRONTPAGE
-    -->
-    <div class="A4 relative mx-auto my-16 bg-primary-light shadow-lg rounded overflow-hidden text-primary-dark font-body print:m-0 print:rounded-none">
-
-        <!-- Eerste rij, grid met 3 kolommen -->
-        <div class="grid grid-cols-3">
-
-<!--
-            <div class="bg-primary-dark">
-                <div id="pasfoto" class="relative h-40 w-40 rounded-full  bg-primary-dark saturate-50">
-    
-                    <div id="pasfoto" class="w-36 h-36">
-                        <img src="img/Foto_Aegon_Sat_Crop.jpg" alt="Pasfoto">
-                    </div>
-    
-                    <p class="absolute inset-x-0 bottom-0 text-center text-white text-lg">Leef in de tevreden tijd</p>
-                </div>
+                <ul class="absolute top-0 right-0 pl-8 bg-stone-50 space-y-1 text-xs text-stone-400">
+                    <li><i class="w-6 text-center fa fa-envelope"></i> arjen@bosconsultant.nl</li>
+                    <li><i class="w-6 text-center fa fa-phone"></i> +31 6 15399756</li>
+                    <li><i class="w-6 text-center fa fa-linkedin"></i> /arjenbos4</li>
+                    <li><i class="w-6 text-center fa fa-calendar"></i> 3 Jan 1991</li>
+                    <li><i class="w-6 text-center fa fa-map-marker"></i> Eindhoven / Remote</li>
+                    <li><i class="w-6 text-center fa fa-quote-left"></i> Leef in de tevreden tijd</li>
+                </ul>
             </div>
--->
-            <div class="bg-primary-dark">
-<!--                <div id="pasfoto" class="relative h-40 w-40 rounded-full  bg-primary-dark saturate-50">-->
-    
-                    <div id="" class="w-36 h-36 mx-auto my-6 rounded-full overflow-hidden">
-                        <!-- Pas geen hier filter: saturate toe, want dan print de foto in lage resolutie -->
-                        <img src="img/Foto_Aegon.jpg" alt="Pasfoto">
-                    </div>
-    
-<!--                    <p class="absolute inset-x-0 bottom-0 text-center text-white text-lg">Leef in de tevreden tijd</p>-->
-<!--                </div>-->
-            </div>
-
-
-            <div class="col-span-2 my-auto font-header text-center">
-                <h1 class="text-4xl pb-2">Arjen Bos MSc</h1>
-                <h2 class="text-xl uppercase tracking-wide">Data Analyst</h2>
-                <h2 class="text-xl uppercase tracking-wide">BI Specialist</h2>
-            </div>
-        </div>
-        
-        <!-- Tweede rij, contact info -->
-        <div class="grid grid-cols-3 bg-secondary">
-            <ul class="my-6 mx-auto">
-                <li><a href="mailto:arjen@bosconsultant.nl"><i class="fa fa-envelope w-8 text-center"></i> arjen@bosconsultant.nl</a></li>
-                <li><a href="tel:+31615399756"><i class="fa fa-phone w-8 text-center"></i> +31 6 15399756</a></li>
-            </ul>
-            <ul class="my-6 mx-auto">
-                <li><i class="fa fa-calendar w-8 text-center"></i> 3 Jan 1991</li>
-                <li><i class="fa fa-map-marker w-8 text-center"></i> Eindhoven</li>
-            </ul>
-            <ul class="my-6 mx-auto">
-                <li><a title="LinkedIn" href="https://www.linkedin.com/in/arjenbos4/" target="_blank"><i class="fa fa-linkedin w-8 text-center"></i></a> <a title="GitHub" href="https://github.com/arjobsen/bosconsultant.nl" target="_blank"><i class="fa fa-github w-8"></i></a></li>
-                <li><i class="fa fa-quote-left w-8 text-center"></i>Leef in de tevreden tijd</li>
-            </ul>
-        </div>
-
-        <!-- Derde rij -->
-        <div class="grid grid-cols-3 h-full">
-            <div class="p-7 bg-primary-dark text-primary-light">
-                <div class="mb-4">
-                    <div class="h-1 w-16 mb-1 bg-secondary"></div>
-                    <h2 class="text-lg text-secondary uppercase tracking-wider font-header">Opleiding</h2>
-                    <div class="mb-3">
-                        <div class="text-sm">2017</div>
-                        <div>Traineeship BI &amp; Big Data</div>
-                        <div class="text-sm">Young Capital Professionals</div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="text-sm">2013 - 2016</div>
-                        <div>MSc Biomedical Engineering</div>
-                        <div class="text-sm">TU Eindhoven</div>
-                    </div>
-                    <div class="">
-                        <div class="text-sm">2009 - 2013</div>
-                        <div>BSc Technische Natuurkunde</div>
-                        <div class="text-sm">TU Eindhoven</div>
-                        <div class="text-sm">Universidad de Barcelona</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="h-1 w-16 mb-1 bg-secondary"></div>
-                    <h2 class="text-lg text-secondary uppercase tracking-wider font-header">Certificaten</h2>
-                    <div>
-                        <div class="text-sm">2021</div>
-                        <ul class="mb-3">
-                            <li>PCAP &middot; <span class="text-sm">Python Institute</span></li>
-                            <li>PCEP &middot; <span class="text-sm">Python Institute</span></li>
-                        </ul>
-                        <div class="text-sm">2020</div>
-                        <ul class="mb-3">
-                            <li>Power BI DA-100 &middot; <span class="text-sm">Microsoft</span></li>
-                            <li>Professional Scrum Master I &middot; <span class="text-sm">Scrum.org</span></li>
-                            <li>Teradata Vantage Certified Associate &middot; <span class="text-sm">Teradata</span></li>
-                        </ul>
-                        <div class="text-sm">2019</div>
-                        <ul class="">
-                            <li>Certified Celonis Analyst &middot; <span class="text-sm">Celonis</span></li>
-                            <li>Lean Green Belt &middot; <span class="text-sm">IIBLC</span></li>
-                            <li>T-SQL DAT201x &middot; <span class="text-sm">Microsoft</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        
-        <div class="col-span-2 p-7">
-            <div class="mb-4 text-sm text-justify">
-                <div class="h-1 w-16 mb-1 bg-primary-dark"></div>
-                <h2 class="text-lg uppercase tracking-wider font-header">Over mij</h2>
-                <p class="mb-2">
-                    Ik ben geïnteresseerd in data analyse, verbeteren van bedrijfsprocessen en automatiseren van repetitieve taken zodat iedereen zijn talent op een leuke en duurzame manier kan inzetten. Op het moment verdiep ik me in het vergroten van mijn effectiviteit. Ik stem met de opdrachtgever af wat belangrijk is en leg daar de focus op.
-                </p>
-                <p class="italic">
-                    Het belangrijkste is, het belangrijkste het belangrijkste laten &mdash; Steven Covey
-                </p>
-            </div>
-            
-            <div class="mb-4">
-                <div class="h-1 w-16 mb-1 bg-primary-dark"></div>
-                <h2 class="text-lg uppercase tracking-wider font-header">Werkervaring</h2>
-
-                {% for w in data.werkervaring if w.frontpage %}
-                <div class="mb-2 flex justify-between w-full">
-                    <div>
-                        <div class="">{{ w.functie }}</div>
-                        <div class="text-sm text-stone-500">{{ w.organisatie }}</div>
-                        <div class="text-sm text-stone-500">{{ w.datum }}</div>
-                    </div>
-                    <div class="text-sm">
-                            {{ w.skills|join(', ') }}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            
-            <div class="text-sm text-justify">
-                <div class="h-1 w-16 mb-1 bg-primary-dark"></div>
-                <h2 class="text-lg uppercase tracking-wider font-header">Aanbevelingen</h2>
-                <div class="mb-4">
-                    <p class="mb-1 italic"><i class="fa fa-quote-left"></i> Arjen is snel met interpreteren en begrijpen van de data en deze vertalen naar inzichten die voor de business relevant zijn. <i class="fa fa-quote-right"></i></p> 
-                    <p class="text-right text-stone-500">Wim Leeuwenkamp &mdash; Programmamanager Belastingdienst</p>
-                </div>
-                <div>
-                    <p class="mb-1 italic"><i class="fa fa-quote-left"></i> Arjen heeft als unieke kwaliteit dat hij zijn gedachten omzet in daden. Hij is creatief, denkt na waarom hij iets doet en zorgt vervolgens ook dat het uitgevoerd wordt. <i class="fa fa-quote-right"></i></p>
-                    <p class="text-right text-stone-500">Mark Tijms &mdash; Teamlead Process Mining EIFFEL</p>
-                </div>
-            </div>
-        </div>
-            
-        <div class="absolute bottom-0 right-0 p-2 text-xs text-stone-500">
-            Dit CV is altijd up-to-date te vinden op <a href="https://bosconsultant.nl/cv" target="_blank">bosconsultant.nl/cv</a>
         </div>
     </div>
     
-    </div>
-    
-    <!-- 
-        TRACKRECORD
-        Elke 5 projecten op een aparte pagina
-    -->
+    <!-- TRACKRECORD -->
     <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
     {% for i in range(0, data.werkervaring|length, 5) %}
-    <div class="A4-landscape mx-auto my-16 p-16 bg-primary-light shadow-lg rounded overflow-hidden text-primary-dark font-body print:m-0 print:rounded-none">
-        <div class="mb-2 font-header text-4xl text-secondary">Arjen Bos</div>
-        <div class="mb-4 font-header text-xl uppercase tracking-wide">Track record</div>
+    <div class="A4-landscape mx-auto my-16 p-16 bg-stone-50 print:m-0">
+        <div class="mb-2 font-header text-4xl text-sky-900">Arjen Bos</div>
+        <div class="mb-4 font-header text-xl uppercase tracking-wide text-sky-900">Track record</div>
         <div class="grid grid-cols-5">
             <!-- Elke werkervaring in een aparte kolom -->
             {% for w in data.werkervaring[i:i+5] %}
@@ -248,7 +196,7 @@
                 </div>
                 <div class="m-2">
                     <div class="text-sm text-stone-500">{{ w.datum }}</div>
-                    <div class="text-lg text-secondary">{{ w.functie }}</div>
+                    <div class="text-lg text-sky-900">{{ w.functie }}</div>
                     <div class="mb-4 text-stone-500">{{ w.organisatie }}</div>
                     <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
                         {% for s in w.skills %}
@@ -262,10 +210,6 @@
         </div>
     </div>
     {% endfor %}
-
-    <div class="hidden">
-        <!-- Dit is fokking raar. Als deze div hier niet staat, kan printPages() niet alle pagina's 1 voor 1 printen... -->
-    </div>
     
 </body>
 </html>
