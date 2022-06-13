@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<!-- 
+    TODO: 
+    * Beautify code als de nieuwe Brackets op Linux wordt ondersteund
+    * Fonts in Tailwind config script
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#x1f468;&#x200d;&#x1f4bb; Arjen Bos CV</title>
+    
+    <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/montserrat');
+        @import url('https://fonts.cdnfonts.com/css/lato');
+        @import url('https://fonts.cdnfonts.com/css/roboto');
+        
+        .font-header {font-family: 'Montserrat', sans-serif;}
+        .font-body {font-family: 'Lato', sans-serif;}
+ 
+        .A4-landscape {
+            height: 210mm;
+            width: 297mm;
+        }
+    </style>
+    
+</head>
+<body class="bg-stone-200 text-stone-700 font-body">
+    <div class="A4-landscape mx-auto my-16 p-8 bg-stone-50 print:m-0">
+        <div class="flex h-full">
+            <div class="flex-none relative w-48">
+                <img src="img/Pasfoto_Eiffel.png" alt="Pasfoto Arjen Bos" class="absolute bottom-0">
+            </div>
+            <div class="flex-1 relative">
+                <h1 class="ml-3 mt-8 mb-4 pl-3 pb-4 border-b-2 border-cyan-900 font-header text-4xl text-cyan-900">
+                    Arjen Bos MSc
+                </h1>
+                
+                <div class="ml-6 grid grid-cols-3 gap-1">
+                    <div class="col-span-2 border-red-100 border-0">
+                        <h2 class="mb-3 uppercase tracking-wide text-stone-400">
+                            Motivatie voor de opdracht
+                        </h2>
+                        <p class="mb-3 text-sm">Ik ben ge&iuml;ntereseerd in het analyseren van data, daaruit inzichten verkrijgen die anders onder water verscholen blijven en vervolgens acties verbinden aan die nieuwe inzichten. Visualisatie vind ik erg krachtig en gebruik ik in alle projecten die ik tot nu toe heb uitgevoerd. Het duidelijk visueel maken van problemen helpt mij om aan alle verschillende stakeholders het verhaal achter de data te laten zien.</p>
+                        <p class="mb-3 text-sm">Ik stel kort cyclisch, doelgericht plannen en prioriteiten samen met de opdrachtgeven en stakeholders. Tijdens de uitvoering van het project monitor ik de voortgang en bouw ik van sprint naar sprint. Het spreekt me erg aan dat de Alliantie deze werkwijze ook hanteert.</p>
+                    </div>
+                    <div class="col-span-1 mt-8 border-green-100 border-0">
+                        <h2 class="mb-3 uppercase tracking-wide text-stone-400">
+                            Over mij
+                        </h2>
+                    
+                    </div>
+                    
+                </div>
+                
+                <ul class="absolute top-0 right-0 pl-8 bg-stone-50 space-y-1 text-xs text-stone-500">
+                    <li><i class="w-4 text-center fa fa-envelope"></i> arjen@bosconsultant.nl</li>
+                    <li><i class="w-4 text-center fa fa-phone"></i> +31 6 15399756</li>
+                    <li><i class="w-4 text-center fa fa-linkedin"></i> /arjenbos4</li>
+                    <li><i class="w-4 text-center fa fa-calendar"></i> 3 Jan 1991</li>
+                    <li><i class="w-4 text-center fa fa-map-marker"></i> Eindhoven / Remote</li>
+                    <li><i class="w-4 text-center fa fa-quote-left"></i> Leef in de tevreden tijd</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
