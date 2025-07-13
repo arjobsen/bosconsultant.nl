@@ -12,7 +12,20 @@ werkervaring:
     omschrijving: |
       Als freelancer voer ik projecten uit bij klanten. De invulling verschilt per project, maar mijn toegevoegde waarde ligt altijd in het analyseren, visualiseren en communiceren van data.
   - organisatie: ASML (Freelance)
-    functie: Financial Data Analyst
+    functie: Financial Data Analyst Customer Value
+    datum: Jan 2025 - heden
+    periode: 
+    frontpage: True
+    skills:
+      - Python
+      - Power Query
+      - Excel
+    omschrijving: | 
+      Het Customer Value team beheert de P&L van ASML en focust op sales. Mijn opdracht bestond uit het automatiseren en optimaliseren van processen en rapporten.
+
+      Ik heb met Python, Power Query en Excel 8 processen en rapporten (deels) geautomatiseerd.
+  - organisatie: ASML (Freelance)
+    functie: Financial Data Analyst OPEX/FTE
     datum: Mar 2023 - Dec 2024
     periode: 1 jaar 9 maanden
     frontpage: True
@@ -168,13 +181,13 @@ werkervaring:
 #      - Excel
 #      - Power BI
 #    omschrijving: Alliander neemt het takenpakket van derde partij Zuit intern over. Adhv de beschikbare data heb ik een financiële businesscase opgesteld en KPIs en een rapportage ingericht.
-  - organisatie: Erasmus MC (via EIFFEL)
-    functie: BI en Process Analyst Zorg
-    datum: Mrt - Apr 2018
-    skills:
-      - Excel
-      - Power BI
-    omschrijving: Zorgadministratie behandelt foutieve registraties in het EPD. Mijn taak was het optimaliseren van de dagelijkse voortgangsrapportage. Na onderzoek met stakeholders welke KPIs relevant zijn heb ik een dashboard gebouwd en het proces versnelt van 4 uur handmatig naar 30 minuten deels automatisch.
+# - organisatie: Erasmus MC (via EIFFEL)
+#   functie: BI en Process Analyst Zorg
+#   datum: Mrt - Apr 2018
+#   skills:
+#     - Excel
+#     - Power BI
+#   omschrijving: Zorgadministratie behandelt foutieve registraties in het EPD. Mijn taak was het optimaliseren van de dagelijkse voortgangsrapportage. Na onderzoek met stakeholders welke KPIs relevant zijn heb ik een dashboard gebouwd en het proces versnelt van 4 uur handmatig naar 30 minuten deels automatisch.
   - organisatie: Freelance
     functie: Website Developer
     datum: Jan 2018 - heden
@@ -183,7 +196,10 @@ werkervaring:
       - HTML
       - CSS
       - Python
-    omschrijving: Naast mijn werk als data analyst ontwerp, bouw en host ik statische websites voor MKB. Ik vind het leuk om me te verdiepen in webdesign en om direct resultaat te zien bij aanpassingen.
+    omschrijving: |
+      Naast mijn werk als data analyst ontwerp, bouw en host ik statische websites voor MKB. Ik vind het leuk om me te verdiepen in webdesign en om direct resultaat te zien bij aanpassingen.
+
+      Ook dit CV is een website welke ik zelf gebouwd heb met HTML, CSS en Python.
   - organisatie: Philips Handheld Diagnostics
     functie: Process Test Engineer
     datum: Sep 2016 - Aug 2017
