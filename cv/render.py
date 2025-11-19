@@ -11,16 +11,16 @@ env = Environment(
 )
 
 # Lezen data
-with open('data.yaml') as f:
+with open('data-en.yaml') as f:
     data = yaml.safe_load(f)
     # print(data)
 
 
 # %%
 # Render
-template = env.get_template('index.html')
+template = env.get_template('index-en.html')
 output = template.render(data=data)
 
 # Save
-with open('public/index.html', 'w') as f:
+with open('public/index-en.html', 'w') as f:
     f.write(output)

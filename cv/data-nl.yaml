@@ -1,0 +1,212 @@
+werkervaring:
+  - organisatie: Freelance Consultant
+    functie: Data Analyst / BI Specialist
+    datum: Apr 2022 - heden
+    frontpage: False
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
+    # https://stackoverflow.com/questions/3790454/how-do-i-break-a-string-in-yaml-over-multiple-lines
+    omschrijving: |
+      Als freelancer voer ik projecten uit bij klanten. De invulling verschilt per project, maar mijn toegevoegde waarde ligt altijd in het analyseren, visualiseren en communiceren van data.
+  - organisatie: ASML (Freelance)
+    functie: Data Analyst Customer Value
+    datum: Jan 2025 - Aug 2025
+    periode: 8 maanden
+    frontpage: True
+    skills:
+      - Python
+      - Power Query
+      - Excel
+    omschrijving: | 
+      Het Customer Value team beheert de P&L van ASML en focust op sales. Mijn opdracht bestond uit het automatiseren en optimaliseren van processen en rapporten.
+
+      Ik heb met Python, Power Query en Excel 8 processen en rapporten (deels) geautomatiseerd.
+  - organisatie: ASML (Freelance)
+    functie: Data Analyst OPEX/FTE
+    datum: Mar 2023 - Dec 2024
+    periode: 1 jaar 9 maanden
+    frontpage: True
+    skills:
+      - Excel
+      - Power Query
+      - Power Pivot
+      - SAP Analytics Cloud
+    omschrijving: | 
+      Het finance OPEX/FTE team van ASML is verantwoordelijk voor meerdere processen en rapporten welke in toenemende mate complexer groeien. Het was mijn taak om de processen en rapporten te structureren en te optimalizeren.
+
+      Ik heb duidelijke standaarden en verwachtingen afgesproken met stakeholders. Resultaten: Maandafsluiting OPEX R&D geoptimaliseerd van 4 werkdagen naar 4 uur. Het tweewekelijkse FTE Report 4 uur semi-geautomatiseerd naar 30 min. R&D Sector Report 5 uur vereenvoudigd en teruggebracht naar 20 min.
+  - organisatie: Energy Global (Freelance)
+    functie: Power BI Specialist
+    datum: Jul 2022 - Jan 2023
+    periode: 7 maanden
+    frontpage: True
+    skills:
+      - Power BI
+      - SQL
+      - Excel
+    omschrijving: |
+      Energy Global verhandelt elektriciteit en gas voor energieleveranciers. Mijn taak was om a.d.h.v. de grote hoeveelheid data hun processen inzichtelijk te rapporteren.
+      
+      Ik heb een Power BI workspace opgezet en Power BI reports gebouwd. Dit omvatte o.a. ETL van MySQL, HTTP requests en bestanden op SharePoint. Ik gaf wekelijks een presentatie en demo aan de stakeholders om feedback op te halen. Deze agile werkwijze was effectief en het resultaat waren duidelijke rapporten met nieuwe inzichten en een stabiel fundament om datagedreven te werken.
+  - organisatie: EIFFEL
+    functie: Professional Analytics
+    datum: Feb 2018 - Feb 2022
+    periode: 4 jaar
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - SQL
+      - Excel
+    omschrijving: Op projectbasis in-house opdrachten bij klanten uitvoeren. Sommige interim opdrachten op basis van vaste uren meedraaien in een bestaand team o.l.v. de klant. Met andere projecten fixed-fee een oplossing, dienst of product aanbieden en de klant ontzorgen. Bij alle projecten heb ik als externe verantwoordelijkheid voor stakeholdermanagement, verwachtingen en doelen verduidelijken en is het mijn taak om de klant te helpen met waar ik goed in ben.
+  # - organisatie: Bol.com (via EIFFEL)
+  #   functie: Power BI & Power Apps Developer
+  #   datum: Okt 2021 - Jan 2022
+  #   periode: 3 maanden
+  #   skills:
+  #     - Power BI
+  #     - Power Apps
+  #     - SharePoint
+  #   omschrijving: Samen met een collega (Product Owner) ontwikkel ik een Power BI rapportage voor de Director Legal van bol.com. Deze geeft inzicht in de Power App die ik in 2019 voor ze gebouwd heb. Na twee jaar gebruik van de app heeft bol.com aanvullende wensen voor nieuwe features. In korte sprints implementeer en publish ik die stapgewijs en in regelmatig overleg met de opdrachtgever.
+#  - organisatie: BKR  (via EIFFEL)
+#    functie: BI Specialist
+#    datum: Sep 2021
+#    frontpage: False
+#    skills:
+#      - Power Apps
+#      - Power BI
+#      - SharePoint
+#    omschrijving: Ontwikkeling SharePoint lijsten, Power App voor interactie en Power BI rapport tbv registratiedossiers voor BKR (Bureau Krediet Registratie).
+#  - organisatie: Van Wijnen  (via EIFFEL)
+#    functie: Data Analyst
+#    datum: Aug 2021
+#    frontpage: False
+#    skills:
+#      - Python
+#      - Shapefiles
+#      - Open data
+#    omschrijving: Geografische data analyse van open data (leefbaarometer) voor bouwbedrijf Van Wijnen.
+  - organisatie: ABN AMRO (via EIFFEL)
+    functie: Data Analyst KYC
+    datum: Aug 2020 - Apr 2021
+    frontpage: True
+    skills:
+      - Power BI
+      - Python
+      - Excel
+      - git
+      - SQL
+    omschrijving: |
+      Als Data Analyst KYC ben ik verantwoordelijk voor periodieke en ad-hoc analyses. Het optimaliseren en automatiseren van processen. En het monitoren daarvan.
+      
+      Ik heb hier een Agile werkomgeving opgezet met Power BI, git en Python. Deze wendbare werkwijze geeft ons meer aandacht voor de wensen van gebruikers en leidt tot een resultaat wat voldoet aan business en aan technische wensen.
+  - organisatie: Belastingdienst (via EIFFEL)
+    functie: Business Analyst
+    datum: Aug 2019 - Jul 2020
+    frontpage: True
+    skills:
+      - SQL (Teradata)
+      - Excel
+      - SAS Visual Analytics
+      - Celonis
+    omschrijving: |
+      Binnen het 4-jarig programma tbv herinrichting van management informatie was mijn taak als business analyst bestaande MI en processen in kaart brengen (met process mining), het vaststellen van de gewenste toekomstige informatievoorziening en het vervolgens dichten van de gap door het bouwen van een dashboard.
+      
+      Het creëren van inzicht en overzicht was belangrijk bij dit project om stakeholdermanagement goed uit te voeren.
+  - organisatie: Rabobank (via EIFFEL)
+    functie: Trainer Power BI
+    datum: Jun 2019
+    frontpage: False
+    skills:
+      - Power BI
+    omschrijving: Ik gaf (samen met een collega) trainingen Power BI aan een gevarieerde groep finance analisten. In de workshop gingen deelnemers zelf aan de slag met een geprepareerde dataset en moesten ze antwoorden op business vragen zoeken.
+#  - organisatie: Bergman Clinics (via EIFFEL)
+#    functie: Data Analyst Zorg (DBC)
+#    datum: Apr - Jun 2019
+#    skills:
+#      - Power BI
+#      - SQL
+#      - Excel
+#    omschrijving: |
+#      Bij de zorgadministratie heb ik de processen in kaart gebracht adhv data uit het EPD en heb ik stuurinformatie ontworpen in een dashboard met automatische refresh.
+#      
+#      Dit project vond plaats tijdens de overname van NL Healthcare Clinics (NLHCC) door Bergman Clinics. Duidelijk en structureel stakeholdermanagement was erg belangrijk om belangen van beide partijen mee te nemen.
+  - organisatie: Alliander (via EIFFEL)
+    functie: Data Analyst
+    datum: Nov 2018 - Jan 2019
+    skills:
+      - Power Query
+      - VBA
+    omschrijving: Ik heb de rapportage van de keten Groot Verbruik geoptimaliseerd. Het oude proces, met Excel en VBA, kostte 30 minuten handmatig werk en was foutgevoelig. Na mijn optimalisatie, waarin ik het proces terug heb gebracht naar de essentie en ombouw naar Power Query, liept het proces na een druk op de knop automatisch en betrouwbaar af.
+  - organisatie: Aegon Bank (via EIFFEL)
+    functie: Data Analyst Finance
+    datum: Aug 2018 - Feb 2019
+    frontpage: False
+    skills:
+      - SQL
+      - R
+      - git
+    omschrijving: Samen met een senior data analyst had ik de taak om de maandrapportage te optimaliseren. Deze omvatte verschillende Excel-bestanden die op verschillende wijze de afdeling binnenkwamen. Werkzaamheden omvatte visual stream maps van proces optekenen, data migreren naar een MS SQL database, dataverwerking automatiseren, agile werkwijze en communicatie met de klant. Het proces teruggebracht van 4 dagen (32 uur) naar 4 uur.
+  - organisatie: Aegon Group Corporate (via EIFFEL)
+    functie: BI Specialist Privacy
+    datum: Jun - Aug 2018
+    skills:
+      - Power BI
+      - Python
+    omschrijving: |
+      Aegon Group werkt met OneTrust voor dataopslag mbt het verwerken van persoonsgegevens. Maar OneTrust mist een gebruikersvriendelijke manier om inzicht te krijgen.
+      
+      Vanuit de opgedane kennis bij Aegon NL heb ik OneTrust gegevens verwerkt zodat de Chief Privacy Officer wereldwijd inzicht krijgt waar, welke data van klanten wordt verwerkt en wat de datakwaliteit van OneTrust biedt.
+  - organisatie: TELE2 (via EIFFEL)
+    functie: BI Specialist
+    datum: Jun - Jul 2018
+    skills:
+      - Power BI
+    omschrijving: Vestigingen van TELE2 communiceren met het hoofdkantoor via ticketsysteem Freshdesk. Het hoofdkantoor heeft behoefte aan inzicht en managementinformatie. Ik heb een rapportage gebouwd op een export uit Freshdesk die de opdrachtgever van alle gewenste informatie voorziet.
+  - organisatie: Aegon NL (via EIFFEL)
+    functie: Data Analyst Privacy
+    datum: Mei - Jul 2018
+    skills:
+      - Python
+      - Power BI
+    omschrijving: Aegon NL heeft behoefte aan analyse van data van alle Nederlandse vestiging om te controleren of ze AVG-compliant zijn. Ik heb een dataset van 400+ Excelbestanden verwerkt, geanalyseerd en gevisualiseerd.
+#  - organisatie: Alliander (via EIFFEL)
+#    functie: Data Consultant
+#    datum: Mrt - Mei 2018
+#    skills:
+#      - SAP Business Objects
+#      - Excel
+#      - Power BI
+#    omschrijving: Alliander neemt het takenpakket van derde partij Zuit intern over. Adhv de beschikbare data heb ik een financiële businesscase opgesteld en KPIs en een rapportage ingericht.
+# - organisatie: Erasmus MC (via EIFFEL)
+#   functie: BI en Process Analyst Zorg
+#   datum: Mrt - Apr 2018
+#   skills:
+#     - Excel
+#     - Power BI
+#   omschrijving: Zorgadministratie behandelt foutieve registraties in het EPD. Mijn taak was het optimaliseren van de dagelijkse voortgangsrapportage. Na onderzoek met stakeholders welke KPIs relevant zijn heb ik een dashboard gebouwd en het proces versnelt van 4 uur handmatig naar 30 minuten deels automatisch.
+  - organisatie: Freelance
+    functie: Website Developer
+    datum: Jan 2018 - heden
+    frontpage: False
+    skills:
+      - HTML
+      - CSS
+      - Python
+    omschrijving: |
+      Naast mijn werk als data analyst ontwerp, bouw en host ik statische websites voor MKB. Ik vind het leuk om me te verdiepen in webdesign en om direct resultaat te zien bij aanpassingen.
+
+      Ook dit CV is een website welke ik zelf gebouwd heb met HTML, CSS en Python.
+  - organisatie: Philips Handheld Diagnostics
+    functie: Process Test Engineer
+    datum: Sep 2016 - Aug 2017
+    frontpage: False
+    skills:
+      - MATLAB
+      - PowerShell
+      - VBA
+    omschrijving: Binnen de R&D afdeling van Philips Handheld Diagnostics was ik verantwoordelijk voor het testen en verbeteren van processen voor quality checks. Value stream mapping, opstellen van werkinstructies, selectie hardware en software, programmeren analysetool en verbeteren van bestaande VBA macro's waren dagelijkse werkzaamheden.
+    

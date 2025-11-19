@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+TODOS:
+    * Wordbreaks `<wbr>` in template als HTML doorzetten
+        * Check yaml.safe_load() en/of jinja2 escapes
+    * Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
+    * Loop over projecten voor frontpage en haal ze uit de yaml
+
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>&#x1f468;&#x200d;&#x1f4bb; CV Arjen Bos</title>
+
+  <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/montserrat');
+    @import url('https://fonts.cdnfonts.com/css/roboto');
+    @import url('https://fonts.cdnfonts.com/css/fira-sans');
+
+    .font-header {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .font-body {
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    .A4-landscape {
+      height: 210mm;
+      width: 297mm;
+    }
+  </style>
+
+</head>
+
+<body class="bg-stone-200 text-stone-700 font-body">
+
+  <!-- FRONTPAGE -->
+  <div class="A4-landscape mx-auto my-16 p-8 bg-stone-50 print:m-0">
+    <div class="flex h-full">
+      <div class="flex-none w-48">
+        <img src="img/Pasfoto_Eiffel.png" alt="Pasfoto Arjen Bos" class="h-full bottom-0 object-cover">
+      </div>
+      <div class="flex-1 relative">
+        <h1 class="ml-3 mt-8 mb-4 pl-3 pb-4 border-b-2 border-cyan-900 font-header text-4xl text-cyan-900">
+          Arjen Bos
+        </h1>
+        <div class="ml-6 grid grid-cols-5 gap-1">
+          <div class="col-span-3 border-red-100 border-0">
+            <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+              Relevant work experience
+            </h2>
+            <div class="mb-4">
+              <div>Financial Data Analyst</div>
+              <div class="text-sm text-stone-500">ASML (Freelance) &mdash; 2 years 5 months</div>
+            </div>
+            <div class="mb-4">
+              <div>BI Developer</div>
+              <div class="text-sm text-stone-500">Energy Global (Freelance) &mdash; 7 months</div>
+            </div>
+            <div class="mb-4">
+              <div>Professional Analytics</div>
+              <div class="text-sm text-stone-500">EIFFEL &mdash; 4 years</div>
+            </div>
+            <div class="mb-4">
+              <div>Data Analyst KYC</div>
+              <div class="text-sm text-stone-500">ABN AMRO (via EIFFEL) &mdash; 8 months</div>
+            </div>
+            <div class="mb-4">
+              <div>Business Analyst</div>
+              <div class="text-sm text-stone-500">Belastingdienst (via EIFFEL) &mdash; 1 year</div>
+            </div>
+            <div class="mb-4">
+              <div>Data Analyst</div>
+              <div class="text-sm text-stone-500">Aegon Bank (via EIFFEL) &mdash; 7 months</div>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Relevant education
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <div>
+                <div class="mb-2">
+                  <div>Data Analyst Associate</div>
+                  <div class="text-xs text-stone-500">Microsoft &mdash; 2020 (Renewed 2024)</div>
+                </div>
+                <div class="mb-2">
+                  <div>PCEP &amp; PCAP</div>
+                  <div class="text-xs text-stone-500">Python Institute &mdash; 2021</div>
+                </div>
+                <div class="mb-2">
+                  <div>Querying Data With T-SQL</div>
+                  <div class="text-xs text-stone-500">Microsoft &mdash; 2019</div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-2">
+                  <div>Professional Scrum Master I</div>
+                  <div class="text-xs text-stone-500">Scrum.org &mdash; 2020</div>
+                </div>
+                <div class="mb-2">
+                  <div>BI &amp; Big Data Consultant</div>
+                  <div class="text-xs text-stone-500">YoungCapital Professionals &mdash; 2017</div>
+                </div>
+                <div class="mb-2">
+                  <div>MSc Biomedical Engineering</div>
+                  <div>BSc Technische Natuurkunde</div>
+                  <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2009 - 2016</div>
+                </div>
+                <!-- <div class="mb-2">
+                  <div>BSc Technische Natuurkunde</div>
+                  <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2013</div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-span-2 mt-0 border-green-100 border-0">
+            <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+              Recommendations
+            </h2>
+            <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen is structured, goal-oriented and skilled."</div>
+              <div class="text-right text-xs text-stone-500">Luc Meys &mdash; Manager ASML Business Insights & Control</div>
+            </div>
+            <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen's work attitude, communication and general attitude have a positive effect on our employees."</div>
+              <div class="text-right text-xs text-stone-500">Tevfik Prins &mdash; Managing Director Energy Global</div>
+            </div>
+            <!-- <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen is snel met interpreteren en begrijpen van de data en deze vertalen naar inzichten die voor de business relevant zijn."</div>
+              <div class="text-right text-xs text-stone-500">Wim Leeuwenkamp &mdash; Programmamanager Belastingdienst</div>
+            </div> -->
+            <!-- <div class="text-sm mb-3">
+              <div class="mb-1">"Arjens proactive mindset and willingness to solve tough problems are truly appreciated"</div>
+              <div class="text-right text-xs text-stone-500">Mark Taylor &mdash; Manager Sales & Country Control ASML</div>
+            </div> -->
+            <div class="text-sm">
+              <div class="mb-1">"Arjen's unique quality is that he turns his thoughts into actions."</div>
+              <div class="text-right text-xs text-stone-500">Mark Tijms &mdash; Teamlead Process Mining EIFFEL</div>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Competences
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <ul class="list-disc list-inside">
+                <li>Ambitious</li>
+                <li>Independent</li>
+                <li>Proactive</li>
+              </ul>
+              <ul class="list-disc list-inside">
+                <li>Analytic</li>
+                <li>Result-oriented</li>
+                <li>Collaborative</li>
+              </ul>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Skills
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <div>
+                <div>Microsoft Power BI</div>
+                <div>Microsoft Excel</div>
+                <div>Python</div>
+                <div>SQL</div>
+                <div>git</div>
+                <div>VBA</div>
+              </div>
+              <div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <ul class="absolute top-0 right-0 pl-8 bg-stone-50 space-y-1 text-xs text-stone-400">
+          <li><a href=# target="_blank" id="email"><i class="w-6 text-center fa fa-envelope"></i> <span></span></a></li>
+          <li><a href=# target="_blank" id="phone"><i class="w-6 text-center fa fa-phone"></i> <span></span></a></li>
+          <li><a href="https://linkedin.com/in/arjenbos4" target="_blank"><i class="w-6 text-center fa fa-linkedin"></i> /arjenbos4</a></li>
+          <li><i class="w-6 text-center fa fa-calendar"></i> 3 Jan 1991</li>
+          <li><i class="w-6 text-center fa fa-map-marker"></i> Eindhoven</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKRECORD -->
+  <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
+  <div class="A4-landscape mx-auto my-16 p-16 bg-stone-50 print:m-0">
+    <div class="mb-2 font-header text-4xl text-sky-900">Arjen Bos</div>
+    <div class="mb-4 font-header text-xl uppercase tracking-wide text-sky-900">Track record</div>
+    <div class="grid grid-cols-5">
+      <!-- Elke werkervaring in een aparte kolom -->
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Apr 2022 - current</div>
+          <div class="text-lg text-sky-900">Data Analyst / BI Specialist</div>
+          <div class="mb-4 text-stone-500">Freelance Consultant</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Excel</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">As a freelancer, I carry out projects for clients. The details differs per project, but my added value always lies in analyzing, visualizing and communicating data.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jan 2025 - Aug 2025</div>
+          <div class="text-lg text-sky-900">Financial Data Analyst Customer Value</div>
+          <div class="mb-4 text-stone-500">ASML (Freelance)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Python</li>
+            <li>Power Query</li>
+            <li>Excel</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">The Customer Value team manages ASML&#39;s P&amp;L and focuses on sales. My assignment consisted of automating and optimizing processes and reports.
+
+I have (semi-) automated 8 processes and reports with Python, Power Query and Excel.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Mar 2023 - Dec 2024</div>
+          <div class="text-lg text-sky-900">Financial Data Analyst OPEX/FTE</div>
+          <div class="mb-4 text-stone-500">ASML (Freelance)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Excel</li>
+            <li>Power Query</li>
+            <li>Power Pivot</li>
+            <li>SAP Analytics Cloud</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">ASML&#39;s finance OPEX/FTE team is responsible for multiple processes and reports that are growing in increasing complexity. It was my job to structure and optimize the processes and reports.
+
+I have agreed on clear standards and expectations with stakeholders. Results a.o.: Month-end closing OPEX R&amp;D optimized from 4 working days to 4 hours. The biweekly FTE Report 4 hours semi-automated to 30 min. R&amp;D Sector Report 5 hours simplified and reduced to 20 min.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jul 2022 - Jan 2023</div>
+          <div class="text-lg text-sky-900">Power BI Specialist</div>
+          <div class="mb-4 text-stone-500">Energy Global (Freelance)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+            <li>SQL</li>
+            <li>Excel</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Energy Global trades electricity and gas for energy suppliers. My job was to report their processes transparently based on the large amount of data.
+
+I set up a Power BI workspace and built Power BI reports. This included ETL from MySQL, HTTP requests and files on SharePoint. I gave a weekly presentation and demo to the stakeholders to collect feedback. This agile working method was effective and the result was clear reports with new insights and a stable foundation for data-driven work.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Feb 2018 - Feb 2022</div>
+          <div class="text-lg text-sky-900">Professional Analytics</div>
+          <div class="mb-4 text-stone-500">EIFFEL</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Excel</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Carrying out in-house assignments for customers on a project basis. Some interim assignments based on fixed hours are part of an existing team led by the customer. With other projects, offer a solution, service or product on a fixed-fee basis and unburden the customer. In all projects, I take responsibility for stakeholder management, clarifying expectations and goals and it is my job to help the client with what I am good at.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="A4-landscape mx-auto my-16 p-16 bg-stone-50 print:m-0">
+    <div class="mb-2 font-header text-4xl text-sky-900">Arjen Bos</div>
+    <div class="mb-4 font-header text-xl uppercase tracking-wide text-sky-900">Track record</div>
+    <div class="grid grid-cols-5">
+      <!-- Elke werkervaring in een aparte kolom -->
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Aug 2020 - Apr 2021</div>
+          <div class="text-lg text-sky-900">Data Analyst KYC</div>
+          <div class="mb-4 text-stone-500">ABN AMRO (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+            <li>Python</li>
+            <li>Excel</li>
+            <li>git</li>
+            <li>SQL</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">As a Data Analyst KYC, I am responsible for periodic and ad-hoc analyses. Optimizing, automating and monitoring processes.
+
+I set up an Agile working environment with Power BI, git and Python. This agile working method gives us more focus on the wishes of users and leads to a result that meets business and technical requirements.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Aug 2019 - Jul 2020</div>
+          <div class="text-lg text-sky-900">Business Analyst</div>
+          <div class="mb-4 text-stone-500">Belastingdienst (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>SQL (Teradata)</li>
+            <li>Excel</li>
+            <li>SAS Visual Analytics</li>
+            <li>Celonis</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Within the 4-year program for the redesign of management information, my task as a business analyst was to map existing information and processes (with process mining), determine the desired future information provision and then close the gap by building a dashboard.
+
+Creating insight and overview was important in this project to properly implement stakeholder management.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jun 2019</div>
+          <div class="text-lg text-sky-900">Trainer Power BI</div>
+          <div class="mb-4 text-stone-500">Rabobank (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">I gave (together with a colleague) Power BI training courses to a varied group of finance analysts. In the workshop, participants got to work with a prepared dataset and had to find answers to business questions.</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Nov 2018 - Jan 2019</div>
+          <div class="text-lg text-sky-900">Data Analyst</div>
+          <div class="mb-4 text-stone-500">Alliander (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power Query</li>
+            <li>VBA</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">I have optimized the reporting of the Groot Verbruik chain. The old process, with Excel and VBA, took 30 minutes of manual work and was error-prone. After my optimization, in which I reduced the process to its essence and converted it to Power Query, the process ended automatically and reliably at the push of a button.</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Aug 2018 - Feb 2019</div>
+          <div class="text-lg text-sky-900">Data Analyst Finance</div>
+          <div class="mb-4 text-stone-500">Aegon Bank (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>SQL</li>
+            <li>R</li>
+            <li>git</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Together with a senior data analyst, I had the task of optimizing the monthly reporting. This included several Excel files that entered the department in different ways. Activities included recording visual stream maps of the process, migrating data to an MS SQL database, automating data processing, establish agile working methods and communication with the customer. Reduced the process from 4 days (32 hours) to 4 hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="A4-landscape mx-auto my-16 p-16 bg-stone-50 print:m-0">
+    <div class="mb-2 font-header text-4xl text-sky-900">Arjen Bos</div>
+    <div class="mb-4 font-header text-xl uppercase tracking-wide text-sky-900">Track record</div>
+    <div class="grid grid-cols-5">
+      <!-- Elke werkervaring in een aparte kolom -->
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jun - Aug 2018</div>
+          <div class="text-lg text-sky-900">BI Specialist Privacy</div>
+          <div class="mb-4 text-stone-500">Aegon Group Corporate (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+            <li>Python</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Aegon Group works with OneTrust for data storage related to the processing of personal data. But OneTrust lacks a user-friendly way to gain insight.
+
+Based on the knowledge gained at Aegon NL, I have processed OneTrust data so that the Chief Privacy Officer worldwide can gain insight into where, which customer data is processed and what the data quality of OneTrust offers.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jun - Jul 2018</div>
+          <div class="text-lg text-sky-900">BI Specialist</div>
+          <div class="mb-4 text-stone-500">TELE2 (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Power BI</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">TELE2 branches communicate with the head office via the Freshdesk ticketing system. The head office needs insight and management information. I built a report on an export from Freshdesk that provides the client with all the information they want.</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Mei - Jul 2018</div>
+          <div class="text-lg text-sky-900">Data Analyst Privacy</div>
+          <div class="mb-4 text-stone-500">Aegon NL (via EIFFEL)</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>Python</li>
+            <li>Power BI</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Aegon NL needs to analyze data from all Dutch branches to check whether they are GDPR compliant. I processed, analyzed and visualized a dataset of 400+ Excel files.</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Jan 2018 - heden</div>
+          <div class="text-lg text-sky-900">Website Developer</div>
+          <div class="mb-4 text-stone-500">Freelance</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">In addition to my work as a data analyst, I design, build and host static websites for SMEs. I like to delve into web design and to see immediate results when making adjustments. 
+
+This CV is also a website which I built myself with HTML, CSS and Python.
+</div>
+        </div>
+      </div>
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">Sep 2016 - Aug 2017</div>
+          <div class="text-lg text-sky-900">Process Test Engineer</div>
+          <div class="mb-4 text-stone-500">Philips Handheld Diagnostics</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            <li>MATLAB</li>
+            <li>PowerShell</li>
+            <li>VBA</li>
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">Within the R&amp;D department of Philips Handheld Diagnostics, I was responsible for testing and improving processes for quality checks. Value stream mapping, drawing up work instructions, selecting hardware and software, programming analysis tool and improving existing VBA macros were daily activities.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/js/encrypt-email.js"></script>
+  <script>
+    // Wacht en daarna decrypt personal data
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    sleep(2100).then(() => {
+      document.getElementById("email").href = "mailto:" + decrypt("bskfoAcptdpotvmubou/om");
+      document.querySelector("#email span").innerHTML = decrypt("bskfoAcptdpotvmubou/om");
+      document.getElementById("phone").href = "tel:" + decrypt(",427264::867");
+      document.querySelector("#phone span").innerHTML = decrypt(",427264::867");
+    })
+  </script>
+
+</body>
+
+</html>

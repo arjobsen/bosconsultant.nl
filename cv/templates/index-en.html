@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+TODOS:
+    * Wordbreaks `<wbr>` in template als HTML doorzetten
+        * Check yaml.safe_load() en/of jinja2 escapes
+    * Gebruik verschillende kleuren voor project voor freelance / EIFFEL en anderen
+    * Loop over projecten voor frontpage en haal ze uit de yaml
+
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>&#x1f468;&#x200d;&#x1f4bb; CV Arjen Bos</title>
+
+  <!-- Tailwind (https://tailwindcss.com/docs/installation/play-cdn) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/montserrat');
+    @import url('https://fonts.cdnfonts.com/css/roboto');
+    @import url('https://fonts.cdnfonts.com/css/fira-sans');
+
+    .font-header {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .font-body {
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    .A4-landscape {
+      height: 210mm;
+      width: 297mm;
+    }
+  </style>
+
+</head>
+
+<body class="bg-stone-200 text-stone-700 font-body">
+
+  <!-- FRONTPAGE -->
+  <div class="A4-landscape mx-auto my-16 p-8 bg-stone-50 print:m-0">
+    <div class="flex h-full">
+      <div class="flex-none w-48">
+        <img src="img/Pasfoto_Eiffel.png" alt="Pasfoto Arjen Bos" class="h-full bottom-0 object-cover">
+      </div>
+      <div class="flex-1 relative">
+        <h1 class="ml-3 mt-8 mb-4 pl-3 pb-4 border-b-2 border-cyan-900 font-header text-4xl text-cyan-900">
+          Arjen Bos
+        </h1>
+        <div class="ml-6 grid grid-cols-5 gap-1">
+          <div class="col-span-3 border-red-100 border-0">
+            <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+              Relevant work experience
+            </h2>
+            <div class="mb-4">
+              <div>Financial Data Analyst</div>
+              <div class="text-sm text-stone-500">ASML (Freelance) &mdash; 2 years 5 months</div>
+            </div>
+            <div class="mb-4">
+              <div>BI Developer</div>
+              <div class="text-sm text-stone-500">Energy Global (Freelance) &mdash; 7 months</div>
+            </div>
+            <div class="mb-4">
+              <div>Professional Analytics</div>
+              <div class="text-sm text-stone-500">EIFFEL &mdash; 4 years</div>
+            </div>
+            <div class="mb-4">
+              <div>Data Analyst KYC</div>
+              <div class="text-sm text-stone-500">ABN AMRO (via EIFFEL) &mdash; 8 months</div>
+            </div>
+            <div class="mb-4">
+              <div>Business Analyst</div>
+              <div class="text-sm text-stone-500">Belastingdienst (via EIFFEL) &mdash; 1 year</div>
+            </div>
+            <div class="mb-4">
+              <div>Data Analyst</div>
+              <div class="text-sm text-stone-500">Aegon Bank (via EIFFEL) &mdash; 7 months</div>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Relevant education
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <div>
+                <div class="mb-2">
+                  <div>Data Analyst Associate</div>
+                  <div class="text-xs text-stone-500">Microsoft &mdash; 2020 (Renewed 2024)</div>
+                </div>
+                <div class="mb-2">
+                  <div>PCEP &amp; PCAP</div>
+                  <div class="text-xs text-stone-500">Python Institute &mdash; 2021</div>
+                </div>
+                <div class="mb-2">
+                  <div>Querying Data With T-SQL</div>
+                  <div class="text-xs text-stone-500">Microsoft &mdash; 2019</div>
+                </div>
+              </div>
+              <div>
+                <div class="mb-2">
+                  <div>Professional Scrum Master I</div>
+                  <div class="text-xs text-stone-500">Scrum.org &mdash; 2020</div>
+                </div>
+                <div class="mb-2">
+                  <div>BI &amp; Big Data Consultant</div>
+                  <div class="text-xs text-stone-500">YoungCapital Professionals &mdash; 2017</div>
+                </div>
+                <div class="mb-2">
+                  <div>MSc Biomedical Engineering</div>
+                  <div>BSc Technische Natuurkunde</div>
+                  <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2009 - 2016</div>
+                </div>
+                <!-- <div class="mb-2">
+                  <div>BSc Technische Natuurkunde</div>
+                  <div class="text-xs text-stone-500">TU Eindhoven &mdash; 2013</div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-span-2 mt-0 border-green-100 border-0">
+            <h2 class="mb-4 uppercase tracking-wide text-stone-400">
+              Recommendations
+            </h2>
+            <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen is structured, goal-oriented and skilled."</div>
+              <div class="text-right text-xs text-stone-500">Luc Meys &mdash; Manager ASML Business Insights & Control</div>
+            </div>
+            <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen's work attitude, communication and general attitude have a positive effect on our employees."</div>
+              <div class="text-right text-xs text-stone-500">Tevfik Prins &mdash; Managing Director Energy Global</div>
+            </div>
+            <!-- <div class="text-sm mb-3">
+              <div class="mb-1">"Arjen is snel met interpreteren en begrijpen van de data en deze vertalen naar inzichten die voor de business relevant zijn."</div>
+              <div class="text-right text-xs text-stone-500">Wim Leeuwenkamp &mdash; Programmamanager Belastingdienst</div>
+            </div> -->
+            <!-- <div class="text-sm mb-3">
+              <div class="mb-1">"Arjens proactive mindset and willingness to solve tough problems are truly appreciated"</div>
+              <div class="text-right text-xs text-stone-500">Mark Taylor &mdash; Manager Sales & Country Control ASML</div>
+            </div> -->
+            <div class="text-sm">
+              <div class="mb-1">"Arjen's unique quality is that he turns his thoughts into actions."</div>
+              <div class="text-right text-xs text-stone-500">Mark Tijms &mdash; Teamlead Process Mining EIFFEL</div>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Competences
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <ul class="list-disc list-inside">
+                <li>Ambitious</li>
+                <li>Independent</li>
+                <li>Proactive</li>
+              </ul>
+              <ul class="list-disc list-inside">
+                <li>Analytic</li>
+                <li>Result-oriented</li>
+                <li>Collaborative</li>
+              </ul>
+            </div>
+
+            <h2 class="mt-8 mb-4 uppercase tracking-wide text-stone-400">
+              Skills
+            </h2>
+            <div class="grid grid-cols-2 text-sm">
+              <div>
+                <div>Microsoft Power BI</div>
+                <div>Microsoft Excel</div>
+                <div>Python</div>
+                <div>SQL</div>
+                <div>git</div>
+                <div>VBA</div>
+              </div>
+              <div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
+                <div><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <ul class="absolute top-0 right-0 pl-8 bg-stone-50 space-y-1 text-xs text-stone-400">
+          <li><a href=# target="_blank" id="email"><i class="w-6 text-center fa fa-envelope"></i> <span></span></a></li>
+          <li><a href=# target="_blank" id="phone"><i class="w-6 text-center fa fa-phone"></i> <span></span></a></li>
+          <li><a href="https://linkedin.com/in/arjenbos4" target="_blank"><i class="w-6 text-center fa fa-linkedin"></i> /arjenbos4</a></li>
+          <li><i class="w-6 text-center fa fa-calendar"></i> 3 Jan 1991</li>
+          <li><i class="w-6 text-center fa fa-map-marker"></i> Eindhoven</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKRECORD -->
+  <!-- len() bestaat niet in Jinja2, gebruik |length filter -->
+  {% for i in range(0, data.werkervaring|length, 5) %}
+  <div class="A4-landscape mx-auto my-16 p-16 bg-stone-50 print:m-0">
+    <div class="mb-2 font-header text-4xl text-sky-900">Arjen Bos</div>
+    <div class="mb-4 font-header text-xl uppercase tracking-wide text-sky-900">Track record</div>
+    <div class="grid grid-cols-5">
+      <!-- Elke werkervaring in een aparte kolom -->
+      {% for w in data.werkervaring[i:i+5] %}
+      <div>
+        <div class="flex my-4">
+          <div class="my-auto h-2 w-2 rounded-full bg-stone-500"></div>
+          <div class="my-auto h-px w-full bg-stone-500"></div>
+        </div>
+        <div class="m-2">
+          <div class="text-sm text-stone-500">{{ w.datum }}</div>
+          <div class="text-lg text-sky-900">{{ w.functie }}</div>
+          <div class="mb-4 text-stone-500">{{ w.organisatie }}</div>
+          <ul class="mb-3 list-disc list-inside space-y-2 text-xs">
+            {% for s in w.skills %}
+            <li>{{ s }}</li>
+            {% endfor %}
+          </ul>
+          <div class="text-xs whitespace-pre-wrap">{{ w.omschrijving }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- JavaScript -->
+  <script src="/js/encrypt-email.js"></script>
+  <script>
+    // Wacht en daarna decrypt personal data
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    sleep(2100).then(() => {
+      document.getElementById("email").href = "mailto:" + decrypt("bskfoAcptdpotvmubou/om");
+      document.querySelector("#email span").innerHTML = decrypt("bskfoAcptdpotvmubou/om");
+      document.getElementById("phone").href = "tel:" + decrypt(",427264::867");
+      document.querySelector("#phone span").innerHTML = decrypt(",427264::867");
+    })
+  </script>
+
+</body>
+
+</html>
